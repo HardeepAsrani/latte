@@ -1,0 +1,91 @@
+body {
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	max-width: 730px;
+	margin: 20px;
+}
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+	max-width: 100%;
+}
+h1, h2, h3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+a:hover {
+	text-decoration: none;
+}
+p,
+li {
+	font-size: 20px;
+	line-height: 1.5;
+	margin: 10px 0px;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.alignleft .avatar {
+	margin-right: 24px;
+	margin-right: 2.4rem;
+}
+.alignright .avatar {
+	margin-left: 24px;
+	margin-left: 2.4rem;
+}
+.sticky {
+}
+img.centered,
+.aligncenter {
+	display: block;
+	margin: 0 auto 24px;
+	margin: 0 auto 2.4rem;
+}
+img.alignnone {
+	margin-bottom: 12px;
+	margin-bottom: 1.2rem;
+}
+.alignleft {
+	float: left;
+	text-align: left;
+}
+.alignright {
+	float: right;
+	text-align: right;
+}
+img.alignleft,
+.wp-caption.alignleft {
+	margin: 0 24px 24px 0;
+	margin: 0 2.4rem 2.4rem 0;
+}
+img.alignright,
+.wp-caption.alignright {
+	margin: 0 0 24px 24px;
+	margin: 0 0 2.4rem 2.4rem;
+}
+.wp-caption-text {
+	font-size: 14px;
+	font-size: 1.4rem;
+	font-weight: 700;
+	text-align: center;
+}
+.gallery-caption {
+}
+.screen-reader-text {
+}
+.screen-reader-textslider {
+}
+.bypostauthor {
+}
+.widget_calendar table {
+	width: 100%;
+}
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+}
