@@ -26,8 +26,22 @@ jQuery(window).load(function() {
 <?php endif; ?>
 });
 jQuery(document).ready(function($) {
-	/* Parallax */
 <?php if( is_page_template( 'template-home.php' ) ) : ?>
+	/* Smooth Scroll */
+	jQuery('a[href*=#]').click(function() {
+		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+			var target = jQuery(this.hash);
+			target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
+			if (target.length) {
+				jQuery('html,body').animate({
+					scrollTop: target.offset().top
+				}, 1200);
+				return false;
+			}
+		}
+	});
+
+	/* Parallax */
 <?php if(!empty($latte_parallax_background)) : ?>
 	$('.site-wrapper').parallax({imageSrc: '<?php echo $latte_parallax_background; ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
@@ -75,6 +89,15 @@ jQuery(document).ready(function($) {
 		},6000);
 	});
 <?php endif; ?>
+
+	/* Apply matchHeight to match services grid */
+	var byRow = $('body').hasClass('pmenu-push');
+	$('.col-md-12').each(function() {
+		$(this).children('.service-box').matchHeight(byRow);
+	});
+	$('.col-md-12').each(function() {
+		$(this).children('.blog-item').matchHeight(byRow);
+	});
 
 <?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ): ?>
 	/* Enable Swiper for Testimonials */

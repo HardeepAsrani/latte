@@ -57,7 +57,12 @@ img {
 button,
 input[type="button"],
 input[type="reset"],
-input[type="submit"] {
+input[type="submit"],
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+a.checkout-button.button.alt.wc-forward {
 	background: #181616;
 	border-color: #181616;
 	color: #FFF;
@@ -79,7 +84,12 @@ input[type="submit"] {
 button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
-input[type="submit"]:hover {
+input[type="submit"]:hover,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+a.checkout-button.button.alt.wc-forward:hover {
 	background: #222;
 }
 input[type="email"],
@@ -1531,6 +1541,15 @@ input.searchform-button:hover,
 input.searchform-button:focus,
 input.searchform-button:active {
 	background: #222;
+}
+
+.woocommerce span.onsale {
+	padding: 0;
+}
+
+.woocommerce .comment-form-rating label,
+.woocommerce .comment-form-comment label {
+	position: relative;
 }
 
 @media screen and (max-width: 300px) {
