@@ -71,6 +71,9 @@ function latte_setup() {
 		$font_sanchez
 	) );
 	
+	// Added WooCommerce support
+	add_theme_support( 'woocommerce' );
+	
 }
 
 add_action( 'after_setup_theme', 'latte_setup' );
@@ -152,12 +155,11 @@ function latte_scripts() {
 
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 	wp_enqueue_script( 'latte_bootstrap_js', get_stylesheet_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ),'',true);
-	wp_enqueue_script( 'latte_parallax', get_stylesheet_directory_uri() . '/assets/js/parallax.min.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_parallax', get_stylesheet_directory_uri() . '/assets/js/parallax.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_stylesheet_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_stylesheet_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
-	wp_enqueue_script( 'latte_matchHeight', get_stylesheet_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
-	wp_enqueue_script( 'latte_swiper', get_stylesheet_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ),'',true);
-	wp_enqueue_script( 'latte_scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_stylesheet_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_swiper', get_stylesheet_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ),'',true);
 }
 
 add_action( 'wp_enqueue_scripts', 'latte_scripts' );
