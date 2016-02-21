@@ -4,23 +4,25 @@
 ?>
 
 		<section class="subscribe" id="subscribe">
-			<div class="row">
-				<div class="col-md-12">
-				<?php if(!empty($latte_subscribe_title) || !empty($latte_subscribe_subtitle)) : ?>
-					<header data-sr="ease-in-out wait 0.25s" class="subscribe-header">
-					<?php if(!empty($latte_subscribe_title)) : ?>
-						<h2><?php echo $latte_subscribe_title; ?></h2>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+					<?php if(!empty($latte_subscribe_title) || !empty($latte_subscribe_subtitle)) : ?>
+						<header data-sr="ease-in-out wait 0.25s" class="subscribe-header">
+						<?php if(!empty($latte_subscribe_title)) : ?>
+							<h2><?php echo $latte_subscribe_title; ?></h2>
+						<?php endif; ?>
+						<?php if(!empty($latte_subscribe_subtitle)) : ?>
+							<h3><?php echo $latte_subscribe_subtitle; ?></h3>
+						<?php endif; ?>
+						</header>
 					<?php endif; ?>
-					<?php if(!empty($latte_subscribe_subtitle)) : ?>
-						<h3><?php echo $latte_subscribe_subtitle; ?></h3>
-					<?php endif; ?>
-					</header>
-				<?php endif; ?>
-				<?php
-					if ( is_active_sidebar( 'subscribe-widgets' ) ) :
-						dynamic_sidebar( 'subscribe-widgets' );
-					endif;
-				?>
+					<?php
+						if ( is_active_sidebar( 'subscribe-widgets' ) ) :
+							dynamic_sidebar( 'subscribe-widgets' );
+						endif;
+					?>
+					</div>
 				</div>
 			</div>
 		</section>

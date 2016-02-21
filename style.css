@@ -4,7 +4,7 @@ Theme URI: http://www.hardeepasrani.com/portfolio/latte/
 Author: Hardeep Asrani
 Author URI: http://www.hardeepasrani.com
 Description: Latte is a one-page parallax WordPress theme for developers, designers & freelancers, to showcase their profile. It comes with many options, including services section, testimonials, and more. Plus, it’s easy to customize! You don’t need a page builder or a drag & drop editor. Every thing can be customized straight from the WordPress Customizer.
-Version: 0.3
+Version: 0.4
 License: GNU General Public License version 2
 License URI: license.txt
 Tags: black, dark, white, fluid-layout, responsive-layout, one-column, two-columns, left-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready
@@ -282,7 +282,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .about .row {
-	padding: 50px;
+	padding: 50px 75px;
 }
 .about .about-header {
 	padding-bottom: 50px;
@@ -505,7 +505,7 @@ img.alignright,
 	margin-top: 0;
 }
 .skills .skill-box {
-	margin: 5px 0;
+	padding: 0 25px;
 }
 .skills .skillbar {
 	position:relative;
@@ -603,7 +603,8 @@ img.alignright,
 	margin-top: 0;
 }
 .swiper-container {
-	width: 80%;
+	width: 100%;
+	max-width: 960px; 
 }
 .testimonials-slide blockquote {
 	font-family: "Sanchez",sans-serif;
@@ -1072,7 +1073,7 @@ img.alignright,
 	background: #F5F5F5;
 }
 .blogposts .row {
-	padding: 50px 0;
+	padding: 50px;
 }
 .blogposts .blog-header {
 	text-align: center;
@@ -1089,21 +1090,28 @@ img.alignright,
 	margin-top: 0;
 }
 .blogposts .blog-item {
-	padding: 10px;
+	padding: 0 25px;
 	overflow: hidden;
-	margin-bottom: 10px
+	margin-bottom: 10px;
 }
 .blogposts .blog-item .item {
 	background: #FFF;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	margin-top: 0;
 	padding: 0;
 }
 .blogposts .blog-item .item .item-featured-image img{
 	width: 100%;
 	max-height: 339px;
 }
+.blogposts .blog-item .item-meta .post-title a {
+	font-size: 20px;
+}
 .blogposts .blog-item .item-meta {
 	padding: 20px;
+}
+.blogposts .blog-item .item-meta p {
+	font-size: 14px;
 }
 
 /*
@@ -1579,6 +1587,28 @@ input.searchform-button:active {
 @media screen and (max-width: 768px) {
 	.about .row {
 		padding: 50px 20px;
+	}
+	.services .row {
+		padding: 50px 20px;
+	}
+	.services .service-box {
+		padding: 25px 0;
+	}
+	.skills .row {
+		padding: 50px 20px;
+	}
+	.skills .skill-box {
+		padding: 0;
+	}
+	.subscribe .row {
+		padding: 50px 40px;
+		text-align: center;
+	}
+	.blogposts .row {
+		padding: 50px 0;
+	}
+	.blogposts .blog-item {
+		padding: 20px;
 	}
 }
 

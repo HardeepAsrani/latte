@@ -3,7 +3,7 @@
  * Register settings for the Theme Customizer.
 */
 
-include get_template_directory() . "/inc/customizer/alpha-control/alpha-control.php";
+require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/alpha-control/alpha-control.php" );
 
 function latte_sanitize_text( $input ) {
 	return $input;
@@ -446,7 +446,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_about_avatar', array(
-		'default' => get_template_directory_uri().'/assets/images/490x490.png',
+		'default' => get_template_directory_uri().'/assets/images/383x383.png',
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'esc_url_raw'
 	));
