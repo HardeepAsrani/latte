@@ -57,7 +57,7 @@ function latte_setup() {
 	));
 	
 	// Adding image sizes. https://developer.wordpress.org/reference/functions/add_image_size/
-	add_image_size( 'latte-blogposts', 423, 339, true );
+	add_image_size( 'latte-blogposts', 287, 230, true );
 	
 	// This theme styles the visual editor to resemble the theme style. https://codex.wordpress.org/Function_Reference/add_editor_style
 	$font_lora = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
@@ -148,7 +148,7 @@ function latte_scripts() {
 	
 	wp_enqueue_style( 'latte_bootstrap_css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
 	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
-	wp_enqueue_style( 'latte_style', get_template_uri());
+	wp_enqueue_style( 'latte_style', get_stylesheet_uri());
 	wp_enqueue_style( 'latte_lora', '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
 	wp_enqueue_style( 'latte_open_sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 	wp_enqueue_style( 'latte_sanchez', '//fonts.googleapis.com/css?family=Sanchez:400,400italic');

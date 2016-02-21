@@ -446,7 +446,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_about_avatar', array(
-		'default' => get_template_directory_uri().'/assets/images/490x490.png',
+		'default' => get_template_directory_uri().'/assets/images/383x383.png',
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'esc_url_raw'
 	));
