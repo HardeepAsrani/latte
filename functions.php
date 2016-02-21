@@ -5,13 +5,13 @@
  * Happy Blogging!
 */
 
-include get_stylesheet_directory() . "/inc/customizer/customizer.php";
-include get_stylesheet_directory() . "/inc/customizer/custom-css.php";
-include get_stylesheet_directory() . "/inc/customizer/custom-js.php";
-include get_stylesheet_directory() . "/inc/widgets/latte-services.php";
-include get_stylesheet_directory() . "/inc/widgets/latte-skills.php";
-include get_stylesheet_directory() . "/inc/widgets/latte-testimonials.php";
-include get_stylesheet_directory() . "/inc/other/post-formats.php";
+require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/customizer.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-css.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-js.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-services.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-testimonials.php" );
+require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
 
 function latte_setup() {
 	// Using this feature you can set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.  https://codex.wordpress.org/Content_Width
@@ -24,7 +24,7 @@ function latte_setup() {
 	add_theme_support('title-tag');
 	
 	// Loads texdomain. https://codex.wordpress.org/Function_Reference/load_theme_textdomain
-	load_theme_textdomain('latte', get_stylesheet_directory() . '/languages');
+	load_theme_textdomain('latte', get_template_directory() . '/languages');
 
 	// Add automatic feed links support. https://codex.wordpress.org/Automatic_Feed_Links
 	add_theme_support('automatic-feed-links');
@@ -43,7 +43,7 @@ function latte_setup() {
 		// Flex height
 		'flex-height' => true,
 		// Header image
-		'default-image' => get_stylesheet_directory_uri() . '/assets/images/blog.jpg',
+		'default-image' => get_template_directory_uri() . '/assets/images/blog.jpg',
 		// Header text
 		'header-text' => false,
 	));
@@ -64,8 +64,8 @@ function latte_setup() {
 	$font_open_sans = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
 	$font_sanchez = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Sanchez:400,400italic' );
 	add_editor_style( array(
-		get_stylesheet_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css',
-		get_stylesheet_directory_uri() . '/assets/css/editor-style.css',
+		get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css',
+		get_template_directory_uri() . '/assets/css/editor-style.css',
 		$font_lora,
 		$font_open_sans,
 		$font_sanchez
@@ -146,27 +146,27 @@ function latte_scripts() {
 	$latte_animations_display = get_theme_mod('latte_animations_display');
 	$latte_menu_display = get_theme_mod('latte_menu_display');
 	
-	wp_enqueue_style( 'latte_bootstrap_css', get_stylesheet_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
-	wp_enqueue_style( 'latte_font_awesome', get_stylesheet_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
-	wp_enqueue_style( 'latte_style', get_stylesheet_uri());
+	wp_enqueue_style( 'latte_bootstrap_css', get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css');
+	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css');
+	wp_enqueue_style( 'latte_style', get_template_uri());
 	wp_enqueue_style( 'latte_lora', '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic');
 	wp_enqueue_style( 'latte_open_sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800');
 	wp_enqueue_style( 'latte_sanchez', '//fonts.googleapis.com/css?family=Sanchez:400,400italic');
 
 	if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
-	wp_enqueue_script( 'latte_bootstrap_js', get_stylesheet_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ),'',true);
-	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_parallax', get_stylesheet_directory_uri() . '/assets/js/parallax.min.js', array( 'jquery' ),'',true);
-	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_stylesheet_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
-	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_stylesheet_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
-	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_stylesheet_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
-	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_swiper', get_stylesheet_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ),'',true);
+	wp_enqueue_script( 'latte_bootstrap_js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.min.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_parallax', get_template_directory_uri() . '/assets/js/parallax.min.js', array( 'jquery' ),'',true);
+	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_template_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
+	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_template_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ),'',true);
 }
 
 add_action( 'wp_enqueue_scripts', 'latte_scripts' );
 
 // Registering and enqueuing scripts/stylesheets for Customizer controls.
 function latte_customizer_js() {
-	wp_enqueue_script( 'latte_customizer_js', get_stylesheet_directory_uri() . '/inc/customizer/customizer.js', array("jquery"), '20120206', true  );
+	wp_enqueue_script( 'latte_customizer_js', get_template_directory_uri() . '/inc/customizer/customizer.js', array("jquery"), '20120206', true  );
 }
 
 add_action( 'customize_controls_enqueue_scripts', 'latte_customizer_js' );

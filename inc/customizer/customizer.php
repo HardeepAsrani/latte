@@ -3,7 +3,7 @@
  * Register settings for the Theme Customizer.
 */
 
-include get_template_directory() . "/inc/customizer/alpha-control/alpha-control.php";
+require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/alpha-control/alpha-control.php" );
 
 function latte_sanitize_text( $input ) {
 	return $input;
