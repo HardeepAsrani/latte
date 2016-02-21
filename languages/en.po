@@ -1,18 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Latte\n"
-"POT-Creation-Date: 2015-12-18 18:23+0530\n"
-"PO-Revision-Date: 2015-12-18 18:23+0530\n"
+"POT-Creation-Date: 2016-02-21 15:28+0530\n"
+"PO-Revision-Date: 2016-02-21 15:28+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.6.10\n"
+"X-Generator: Poedit 1.8.4\n"
 "X-Poedit-Basepath: .\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;_x;_nx;esc_html__;ese_html_e;ese_html_x\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: comments.php:24
@@ -205,103 +206,103 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:92
+#: functions.php:95
 msgid "Sidear"
 msgstr ""
 
-#: functions.php:101 inc/customizer/customizer.php:91
+#: functions.php:104 inc/customizer/customizer.php:91
 msgid "Services Section"
 msgstr ""
 
-#: functions.php:110 inc/customizer/customizer.php:105
+#: functions.php:113 inc/customizer/customizer.php:105
 msgid "Skills Section"
 msgstr ""
 
-#: functions.php:119 inc/customizer/customizer.php:98
+#: functions.php:122 inc/customizer/customizer.php:98
 msgid "Subscribe Section"
 msgstr ""
 
-#: functions.php:128 inc/customizer/customizer.php:112
+#: functions.php:131 inc/customizer/customizer.php:112
 msgid "Testimonials Section"
 msgstr ""
 
-#: functions.php:177
+#: functions.php:179
 msgid "Home"
 msgstr ""
 
-#: functions.php:178
+#: functions.php:180
 msgid "About"
 msgstr ""
 
-#: functions.php:179 inc/customizer/customizer.php:526 sections/social.php:2
+#: functions.php:181 inc/customizer/customizer.php:526 sections/social.php:2
 msgid "Social"
 msgstr ""
 
-#: functions.php:180 inc/customizer/customizer.php:641 sections/services.php:2
+#: functions.php:182 inc/customizer/customizer.php:641 sections/services.php:2
 msgid "Services"
 msgstr ""
 
-#: functions.php:181
+#: functions.php:183
 msgid "Separator"
 msgstr ""
 
-#: functions.php:182 inc/customizer/customizer.php:764 sections/skills.php:2
+#: functions.php:184 inc/customizer/customizer.php:764 sections/skills.php:2
 msgid "Skills"
 msgstr ""
 
-#: functions.php:183
+#: functions.php:185
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:184 inc/customizer/customizer.php:693
+#: functions.php:186 inc/customizer/customizer.php:693
 #: sections/subscribe.php:2
 msgid "Subscribe"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:187
 msgid "Pricing"
 msgstr ""
 
-#: functions.php:186 inc/customizer/customizer.php:815
+#: functions.php:188 inc/customizer/customizer.php:815
 #: sections/testimonials.php:2
 msgid "Testimonials"
 msgstr ""
 
-#: functions.php:187 inc/customizer/customizer.php:866
+#: functions.php:189 inc/customizer/customizer.php:866
 #: sections/blogposts.php:2
 msgid "Blog"
 msgstr ""
 
-#: functions.php:188
+#: functions.php:190
 msgid "Map"
 msgstr ""
 
-#: functions.php:189
+#: functions.php:191
 msgid "Contact"
 msgstr ""
 
-#: functions.php:206
+#: functions.php:208
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:206 functions.php:230
+#: functions.php:208 functions.php:232
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:218
+#: functions.php:220
 #, php-format
 msgid "<span>%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:221
+#: functions.php:223
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:226
+#: functions.php:228
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: functions.php:227
+#: functions.php:229
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
@@ -717,104 +718,104 @@ msgid ""
 "customized straight from the WordPress Customizer.</p>"
 msgstr ""
 
-#: sections/services.php:24 sections/skills.php:24
+#: sections/services.php:25 sections/skills.php:25
 msgid "HTML"
 msgstr ""
 
-#: sections/services.php:26 sections/services.php:31 sections/services.php:36
-#: sections/services.php:41 sections/services.php:46 sections/services.php:51
+#: sections/services.php:27 sections/services.php:32 sections/services.php:37
+#: sections/services.php:42 sections/services.php:47 sections/services.php:52
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
 "tempor incididunt ut labore et dolore magna aliqua."
 msgstr ""
 
-#: sections/services.php:29 sections/skills.php:30
+#: sections/services.php:30 sections/skills.php:31
 msgid "CSS"
 msgstr ""
 
-#: sections/services.php:34 sections/skills.php:48
+#: sections/services.php:35 sections/skills.php:49
 msgid "WordPress"
 msgstr ""
 
-#: sections/services.php:39
+#: sections/services.php:40
 msgid "Linux"
 msgstr ""
 
-#: sections/services.php:44 sections/skills.php:54
+#: sections/services.php:45 sections/skills.php:55
 msgid "SEO"
 msgstr ""
 
-#: sections/services.php:49 sections/skills.php:66
+#: sections/services.php:50 sections/skills.php:67
 msgid "Writing"
 msgstr ""
 
-#: sections/skills.php:36
+#: sections/skills.php:37
 msgid "jQuery"
 msgstr ""
 
-#: sections/skills.php:42
+#: sections/skills.php:43
 msgid "PHP"
 msgstr ""
 
-#: sections/skills.php:60
+#: sections/skills.php:61
 msgid "Photoshop"
 msgstr ""
 
-#: sections/social.php:22
+#: sections/social.php:23
 msgid "Facebook"
 msgstr ""
 
-#: sections/social.php:30
+#: sections/social.php:31
 msgid "Twitter"
 msgstr ""
 
-#: sections/social.php:38
+#: sections/social.php:39
 msgid "Google +"
 msgstr ""
 
-#: sections/social.php:46
+#: sections/social.php:47
 msgid "Instagram"
 msgstr ""
 
-#: sections/social.php:54
+#: sections/social.php:55
 msgid "Github"
 msgstr ""
 
-#: sections/testimonials.php:30
+#: sections/testimonials.php:31
 msgid ""
 "\"Design is not just what it looks like and feels like. Design is how it "
 "works.\""
 msgstr ""
 
-#: sections/testimonials.php:31
+#: sections/testimonials.php:32
 msgid "Steve Jobs"
 msgstr ""
 
-#: sections/testimonials.php:32
+#: sections/testimonials.php:33
 msgid "Apple"
 msgstr ""
 
-#: sections/testimonials.php:35
+#: sections/testimonials.php:36
 msgid "\"Your most unhappy customers are your greatest source of learning.\""
 msgstr ""
 
-#: sections/testimonials.php:36
+#: sections/testimonials.php:37
 msgid "Bill Gates"
 msgstr ""
 
-#: sections/testimonials.php:37
+#: sections/testimonials.php:38
 msgid "Microsoft"
 msgstr ""
 
-#: sections/testimonials.php:40
+#: sections/testimonials.php:41
 msgid "\"I've actually not read any books on time management.\""
 msgstr ""
 
-#: sections/testimonials.php:41
+#: sections/testimonials.php:42
 msgid "Elon Musk"
 msgstr ""
 
-#: sections/testimonials.php:42
+#: sections/testimonials.php:43
 msgid "Tesla Motors"
 msgstr ""
 
