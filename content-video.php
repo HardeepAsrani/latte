@@ -1,7 +1,13 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('item'); ?>>
 	<?php if ( is_singular( get_post_type() ) ) : ?>
 		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
-		<?php printf( __( '<div class="post-meta">Video published by <a href="%2$s">%1$s</a> on <time>%3$s</time></div>', 'latte' ), get_the_author(), get_author_posts_url(get_the_author_meta( 'ID' )), get_the_time( get_option( 'date_format' ) ) ); ?>
+		<div class="post-meta">
+			<?php printf(
+				__( 'Video published by %1$s on %2$s', 'latte' ),
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a>',
+				'<time>' . get_the_time( get_option( 'date_format' ) ) . '</time>'
+			);	?>
+		</div>
 		<div class="content">
 		<?php 
 			if ( has_post_thumbnail() ) :
@@ -36,6 +42,13 @@
 					<?php the_content(); ?>
 				<?php endif; ?>
 		</div>
-		<?php printf( __( '<div class="post-meta">Video published by <a href="%2$s">%1$s</a> on <time>%3$s</time> | <a href="%4$s">Permalink</a></div>', 'latte' ), get_the_author(), get_author_posts_url(get_the_author_meta( 'ID' )), get_the_time( get_option( 'date_format' ) ), get_the_permalink() ); ?>
+		<div class="post-meta">
+			<?php printf(
+				__( 'Video published by %1$s on %2$s | %3$s', 'latte' ),
+				'<a href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a>',
+				'<time>' . get_the_time( get_option( 'date_format' ) ) . '</time>',
+				'<a href="' . esc_url( get_permalink() ) . '">' . __( 'Permalink', 'latte' ) . '</a>'
+			);	?>
+		</div>
 	<?php endif; ?>
 </article>
