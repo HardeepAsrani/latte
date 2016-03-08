@@ -49,7 +49,7 @@ function latte_setup() {
 	));
 
 	// Add post formats support. https://codex.wordpress.org/Post_Formats#Adding_Theme_Support
-	add_theme_support('post-formats', array( 'aside', 'audio', 'chat', 'gallery', 'image', 'link', 'quote', 'status', 'video' ));
+	add_theme_support('post-formats', array( 'aside', 'chat', 'link', 'quote', 'status', 'video' ));
 
 	// This theme uses wp_nav_menu(). https://codex.wordpress.org/Function_Reference/register_nav_menu
 	register_nav_menus( array(
