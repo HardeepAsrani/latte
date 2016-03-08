@@ -89,6 +89,8 @@ jQuery(document).ready(function($) {
 	});
 <?php endif; ?>
 
+<?php if( is_page_template( 'template-home.php' ) ) : ?>
+
 	/* Apply matchHeight to match services grid */
 	var byRow = $('body').hasClass('pmenu-push');
 	$('.col-md-12').each(function() {
@@ -97,6 +99,8 @@ jQuery(document).ready(function($) {
 	$('.col-md-12').each(function() {
 		$(this).children('.blog-item').matchHeight(byRow);
 	});
+
+<?php endif; ?>
 
 });
 </script>
