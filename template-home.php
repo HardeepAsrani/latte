@@ -10,7 +10,6 @@
 	$latte_services_display = get_theme_mod('latte_services_display');
 	$latte_subscribe_display = get_theme_mod('latte_subscribe_display', 1);
 	$latte_skills_display = get_theme_mod('latte_skills_display');
-	$latte_testimonials_display = get_theme_mod('latte_testimonials_display');
 	$latte_blogposts_display = get_theme_mod('latte_blogposts_display');
 
 	if( isset($latte_intro_display) && $latte_intro_display != 1 ):
@@ -35,10 +34,6 @@
 
 	if( isset($latte_skills_display) && $latte_skills_display != 1 ):
 		get_template_part( 'sections/skills' );
-	endif;
-
-	if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ):
-		get_template_part( 'sections/testimonials' );
 	endif;
 
 	if( isset($latte_blogposts_display) && $latte_blogposts_display != 1 ):

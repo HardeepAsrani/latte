@@ -6,6 +6,4 @@ jQuery(document).ready(function($) {
 	wp.customize.section( 'sidebar-widgets-subscribe-widgets' ).priority( '15' );
 	wp.customize.section( 'sidebar-widgets-skills-widgets' ).panel( 'latte_skills_settings' );
 	wp.customize.section( 'sidebar-widgets-skills-widgets' ).priority( '10' );
-	wp.customize.section( 'sidebar-widgets-testimonials-widgets' ).panel( 'latte_testimonials_settings' );
-	wp.customize.section( 'sidebar-widgets-testimonials-widgets' ).priority( '10' );
 });

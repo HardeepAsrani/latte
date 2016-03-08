@@ -10,7 +10,6 @@ require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/cus
 require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-js.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-services.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-testimonials.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
 
 function latte_setup() {
@@ -127,15 +126,6 @@ function latte_widgets_init() {
 		'after_title'   => '</p>',
 	) );
 
-	register_sidebar( array(
-		'name'		  => __( 'Testimonials Section', 'latte' ),
-		'id'			=> 'testimonials-widgets',
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '<h3>',
-		'after_title'   => '</h3>',
-	) );
-
 }
 
 add_action( 'widgets_init', 'latte_widgets_init' );
@@ -159,7 +149,6 @@ function latte_scripts() {
 	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_template_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_template_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
 	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
-	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_swiper', get_template_directory_uri() . '/assets/js/swiper.min.js', array( 'jquery' ),'',true);
 }
 
 add_action( 'wp_enqueue_scripts', 'latte_scripts' );
@@ -185,7 +174,6 @@ function latte_new_setup() {
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#portfolio' ) ) . '">'. __('Portfolio', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#subscribe' ) ) . '">'. __('Subscribe', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#pricing' ) ) . '">'. __('Pricing', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#testimonials' ) ) . '">'. __('Testimonials', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#blogposts' ) ) . '">'. __('Blog', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#map' ) ) . '">'. __('Map', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#contact' ) ) . '">'. __('Contact', 'latte') .'</a></li>';

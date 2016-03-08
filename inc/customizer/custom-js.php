@@ -6,7 +6,6 @@ function latte_custom_js() {
 	$latte_preloader_display = get_theme_mod('latte_preloader_display');
 	$latte_menu_display = get_theme_mod('latte_menu_display');
 	$latte_animations_display = get_theme_mod('latte_animations_display');
-	$latte_testimonials_display = get_theme_mod('latte_testimonials_display');
 	$latte_skills_display = get_theme_mod('latte_skills_display');
 	$latte_parallax_background = get_theme_mod('latte_parallax_background', get_template_directory_uri().'/assets/images/background.jpg' );
 ?>
@@ -98,14 +97,6 @@ jQuery(document).ready(function($) {
 	$('.col-md-12').each(function() {
 		$(this).children('.blog-item').matchHeight(byRow);
 	});
-
-<?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ): ?>
-	/* Enable Swiper for Testimonials */
-	var mySwiper = new Swiper ('.swiper-container', {
-		loop: true,
-		autoplay:10000
-	})
-<?php endif; ?>
 
 });
 </script>

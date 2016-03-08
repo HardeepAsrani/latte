@@ -106,22 +106,15 @@ function latte_customize_register($wp_customize) {
 		'description'	=> __('This section allows you to configure Skills section.', 'latte')
 	));
 
-	$wp_customize->add_panel( 'latte_testimonials_settings', array(
-		'priority'	   => 45,
-		'capability'	 => 'edit_theme_options',
-		'title'		  => __('Testimonials Section', 'latte'),
-		'description'	=> __('This section allows you to configure Testimonials section.', 'latte')
-	));
-
 	$wp_customize->add_panel( 'latte_blogposts_settings', array(
-		'priority'	   => 50,
+		'priority'	   => 45,
 		'capability'	 => 'edit_theme_options',
 		'title'		  => __('Blog Section', 'latte'),
 		'description'	=> __('This section allows you to configure Blog section.', 'latte')
 	));
 
 	$wp_customize->add_panel( 'latte_blog_settings', array(
-		'priority'	   => 55,
+		'priority'	   => 50,
 		'capability'	 => 'edit_theme_options',
 		'title'		  => __('Blog Page', 'latte'),
 		'description'	=> __('This section allows you to configure Blog page.', 'latte')
@@ -263,18 +256,6 @@ function latte_customize_register($wp_customize) {
 		'priority' => 15,
 		'title' => __('Colors', 'latte'),
 		'panel'  => 'latte_skills_settings'
-	));
-
-	$wp_customize->add_section('latte_testimonials_settings', array(
-		'priority' => 5,
-		'title' => __('Settings', 'latte'),
-		'panel'  => 'latte_testimonials_settings'
-	));
-
-	$wp_customize->add_section('latte_testimonials_colors', array(
-		'priority' => 15,
-		'title' => __('Colors', 'latte'),
-		'panel'  => 'latte_testimonials_settings'
 	));
 
 	$wp_customize->add_section('latte_blogposts_settings', array(
@@ -797,57 +778,6 @@ function latte_customize_register($wp_customize) {
 		'section' => 'latte_skills_colors',
 		'priority' => 5,
 		'settings' => 'latte_skills_background_color'
-	)));
-
-	$wp_customize->add_setting( 'latte_testimonials_display', array(
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'latte_sanitize_checkbox'
-	));
-
-	$wp_customize->add_control('latte_testimonials_display',array(
-		'type' => 'checkbox',
-		'label' => __('Disable Testimonials Section','latte'),
-		'section' => 'latte_testimonials_settings',
-		'priority' => 5
-	));
-
-	$wp_customize->add_setting('latte_testimonials_title', array(
-		'default' => __('Testimonials', 'latte'),
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-
-	$wp_customize->add_control('latte_testimonials_title', array(
-		'label' => __('Section Title', 'latte'),
-		'section' => 'latte_testimonials_settings',
-		'priority' => 15,
-		'settings' => 'latte_testimonials_title'
-	));
-
-	$wp_customize->add_setting('latte_testimonials_subtitle', array(
-		'default' => __('Here\'s what the clients have to say.', 'latte'),
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-
-	$wp_customize->add_control('latte_testimonials_subtitle', array(
-		'label' => __('Section Subtitle', 'latte'),
-		'section' => 'latte_testimonials_settings',
-		'priority' => 20,
-		'settings' => 'latte_testimonials_subtitle'
-	));
-
-	$wp_customize->add_setting('latte_testimonials_background_color', array(
-		'default' => 'rgba(0, 0, 0, 0.7)',
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
-	));
-
-	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_testimonials_background_color', array(
-		'label' => __('Background Color', 'latte'),
-		'section' => 'latte_testimonials_colors',
-		'priority' => 5,
-		'settings' => 'latte_testimonials_background_color'
 	)));
 
 	$wp_customize->add_setting( 'latte_blogposts_display', array(

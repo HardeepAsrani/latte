@@ -9,7 +9,6 @@ function latte_custom_css() {
 	$latte_services_display = get_theme_mod('latte_services_display');
 	$latte_subscribe_display = get_theme_mod('latte_subscribe_display', 1);
 	$latte_skills_display = get_theme_mod('latte_skills_display');
-	$latte_testimonials_display = get_theme_mod('latte_testimonials_display');
 	$latte_blogposts_display = get_theme_mod('latte_blogposts_display');
 	$latte_intro_background_color = get_theme_mod('latte_intro_background_color', 'rgba(0, 0, 0, 0.7)' );
 	$latte_about_background_color = get_theme_mod('latte_about_background_color', '#F5F5F5' );
@@ -17,7 +16,6 @@ function latte_custom_css() {
 	$latte_services_background_color = get_theme_mod('latte_services_background_color', '#F5F5F5' );
 	$latte_subscribe_background_color = get_theme_mod('latte_subscribe_background_color', 'rgba(0, 0, 0, 0.7)' );
 	$latte_skills_background_color = get_theme_mod('latte_skills_background_color', '#F5F5F5' );
-	$latte_testimonials_background_color = get_theme_mod('latte_testimonials_background_color', 'rgba(0, 0, 0, 0.7)' );
 	$latte_blogposts_background_color = get_theme_mod('latte_blogposts_background_color', '#F5F5F5' );
 ?>
 <style>
@@ -61,13 +59,6 @@ function latte_custom_css() {
 <?php if(!empty($latte_skills_background_color)) : ?>
 .skills {
 	background: <?php echo $latte_skills_background_color; ?>;
-}
-<?php endif; ?>
-<?php endif; ?>
-<?php if( isset($latte_testimonials_display) && $latte_testimonials_display != 1 ): ?>
-<?php if(!empty($latte_testimonials_background_color)) : ?>
-.testimonials {
-	background: <?php echo $latte_testimonials_background_color; ?>;
 }
 <?php endif; ?>
 <?php endif; ?>
