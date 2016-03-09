@@ -10,10 +10,10 @@
 					<?php if(!empty($latte_subscribe_title) || !empty($latte_subscribe_subtitle)) : ?>
 						<header data-sr="ease-in-out wait 0.25s" class="subscribe-header">
 						<?php if(!empty($latte_subscribe_title)) : ?>
-							<h2><?php echo $latte_subscribe_title; ?></h2>
+							<h2><?php echo esc_html($latte_subscribe_title); ?></h2>
 						<?php endif; ?>
 						<?php if(!empty($latte_subscribe_subtitle)) : ?>
-							<h3><?php echo $latte_subscribe_subtitle; ?></h3>
+							<h3><?php echo esc_html($latte_subscribe_subtitle); ?></h3>
 						<?php endif; ?>
 						</header>
 					<?php endif; ?>

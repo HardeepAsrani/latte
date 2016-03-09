@@ -1,7 +1,24 @@
 <?php
-/*
- * This file takes care of all the post formats. Thanks to Justin Tadlock's Theme Hybrid. :)
-*/
+/**
+ * Post Format Tools - A mini library for formatting post formats.
+ *
+ * Post Format Tools has functions and filters for handling the output of post formats.  This library 
+ * helps theme developers format posts with given post formats in a more standardized fashion.
+ *
+ * This program is free software; you can redistribute it and/or modify it under the terms of the GNU 
+ * General Public License as published by the Free Software Foundation; either version 2 of the License, 
+ * or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without 
+ * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * @package   PostFormatTools
+ * @version   0.1.0
+ * @author    Justin Tadlock <justin@justintadlock.com>
+ * @copyright Copyright (c) 2012, Justin Tadlock
+ * @link      http://justintadlock.com
+ * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ */
 
 // Adds an infinity character "&#8734;" to the end of the post content on 'aside' posts.
 function latte_post_format_tools_aside_infinity( $content ) {
