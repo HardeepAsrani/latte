@@ -401,7 +401,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_about_title', array(
-		'default' => __('About Me', 'latte'),
+		'default' => esc_html__('About Me', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -414,7 +414,7 @@ function latte_customize_register($wp_customize) {
 	));
 	
 	$wp_customize->add_setting('latte_about_subtitle', array(
-		'default' => __('Here are some things that you should know about me.', 'latte'),
+		'default' => esc_html__('Here are some things that you should know about me.', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -440,7 +440,7 @@ function latte_customize_register($wp_customize) {
 	)));
 
 	$wp_customize->add_setting('latte_about_name', array(
-		'default' => __('John Doe', 'latte'),
+		'default' => esc_html__('John Doe', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -453,7 +453,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_about_position', array(
-		'default' => __('Web Designer', 'latte'),
+		'default' => esc_html__('Web Designer', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -504,7 +504,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_social_title', array(
-		'default' => __('Social', 'latte'),
+		'default' => esc_html__('Social', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -619,7 +619,7 @@ function latte_customize_register($wp_customize) {
 	)));
 
 	$wp_customize->add_setting('latte_services_title', array(
-		'default' => __('Services', 'latte'),
+		'default' => esc_html__('Services', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -632,7 +632,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_services_subtitle', array(
-		'default' => __('Things that I work on.', 'latte'),
+		'default' => esc_html__('Things that I work on.', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -671,7 +671,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_subscribe_title', array(
-		'default' => __('Subscribe', 'latte'),
+		'default' => esc_html__('Subscribe', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -684,7 +684,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_subscribe_subtitle', array(
-		'default' => __('I won\'t spam you, promise!', 'latte'),
+		'default' => esc_html__('I won\'t spam you, promise!', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -742,7 +742,7 @@ function latte_customize_register($wp_customize) {
 	)));
 
 	$wp_customize->add_setting('latte_skills_title', array(
-		'default' => __('Skills', 'latte'),
+		'default' => esc_html__('Skills', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -755,7 +755,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_skills_subtitle', array(
-		'default' => __('Things that I\'m good at.', 'latte'),
+		'default' => esc_html__('Things that I\'m good at.', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -793,7 +793,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_blogposts_title', array(
-		'default' => __('Blog', 'latte'),
+		'default' => esc_html__('Blog', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));
@@ -806,7 +806,7 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_blogposts_subtitle', array(
-		'default' => __('My thoughts.', 'latte'),
+		'default' => esc_html__('My thoughts.', 'latte'),
 		'capability' => 'edit_theme_options',
 		'sanitize_callback' => 'sanitize_text_field'
 	));

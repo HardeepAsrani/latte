@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
 
 	/* Parallax */
 <?php if(!empty($latte_parallax_background)) : ?>
-	$('.site-wrapper').parallax({imageSrc: '<?php echo $latte_parallax_background; ?>', bleed: '10', androidFix: 'false'});
+	$('.site-wrapper').parallax({imageSrc: '<?php echo esc_url($latte_parallax_background); ?>', bleed: '10', androidFix: 'false'});
 <?php endif; ?>
 <?php endif; ?>
 
