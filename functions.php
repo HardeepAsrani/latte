@@ -7,7 +7,6 @@
 
 require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/customizer.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-css.php" );
-require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/custom-js.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-services.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
@@ -149,6 +148,24 @@ function latte_scripts() {
 	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_template_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_template_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
 	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
+	wp_enqueue_script( 'latte_scripts_js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'',true);
+
+	if( is_page_template( 'template-home.php' ) ) :
+		$latte_is_homepage = 0;
+	else:
+		$latte_is_homepage = 1;
+	endif;
+
+	wp_localize_script('latte_scripts_js', 'latte_script_var', array(
+		'latte_preloader_display' => get_theme_mod('latte_preloader_display'),
+		'latte_animations_display' => get_theme_mod('latte_animations_display'),
+		'latte_is_homepage' => $latte_is_homepage,
+		'latte_parallax_background' => get_theme_mod('latte_parallax_background', get_template_directory_uri().'/assets/images/background.jpg' ),
+		'latte_menu_display' => get_theme_mod('latte_menu_display'),
+		'latte_skills_display' => get_theme_mod('latte_skills_display'),
+		'latte_services_display' => get_theme_mod('latte_services_display'),
+		'latte_blogposts_display' => get_theme_mod('latte_blogposts_display')
+	));
 }
 
 add_action( 'wp_enqueue_scripts', 'latte_scripts' );
