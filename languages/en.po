@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Latte\n"
-"POT-Creation-Date: 2016-02-21 15:28+0530\n"
-"PO-Revision-Date: 2016-02-21 15:28+0530\n"
+"POT-Creation-Date: 2016-03-10 01:31+0530\n"
+"PO-Revision-Date: 2016-03-10 01:32+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -29,8 +29,7 @@ msgstr ""
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:75 inc/customizer/customizer.php:468
-#: inc/widgets/latte-testimonials.php:27
+#: comments.php:75 inc/customizer/customizer.php:449
 msgid "Name"
 msgstr ""
 
@@ -46,95 +45,46 @@ msgstr ""
 msgid "Comment"
 msgstr ""
 
-#: content-aside.php:4
+#: content-aside.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Aside published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Aside published by %1$s on %2$s"
 msgstr ""
 
-#: content-aside.php:23 content-audio.php:23 content-chat.php:26
-#: content-gallery.php:26 content-image.php:23 content-link.php:23
-#: content-quote.php:23 content-status.php:24 content-video.php:23
-#: content.php:23
+#: content-aside.php:29 content-chat.php:32 content-link.php:29
+#: content-quote.php:29 content-status.php:30 content-video.php:29
+#: content.php:29
 msgid "Categories:"
 msgstr ""
 
-#: content-aside.php:24 content-audio.php:24 content-chat.php:27
-#: content-gallery.php:27 content-image.php:24 content-link.php:24
-#: content-quote.php:24 content-status.php:25 content-video.php:24
-#: content.php:24
+#: content-aside.php:30 content-chat.php:33 content-link.php:30
+#: content-quote.php:30 content-status.php:31 content-video.php:30
+#: content.php:30
 msgid "Tags: "
 msgstr ""
 
-#: content-audio.php:4
+#: content-chat.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Audio published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Chat published by %1$s on %2$s"
 msgstr ""
 
-#: content-audio.php:38
+#: content-chat.php:49
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Audio published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Chat published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content-chat.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Chat published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+#: content-chat.php:52 content-link.php:42 content-quote.php:47
+#: content-video.php:50 content.php:49
+msgid "Permalink"
 msgstr ""
 
-#: content-chat.php:41
+#: content-link.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Chat published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Link published by %1$s on %2$s"
 msgstr ""
 
-#: content-gallery.php:4
+#: content-link.php:39
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Gallery published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-gallery.php:41
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Gallery published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
-msgstr ""
-
-#: content-image.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Image published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-image.php:34
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Image published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
-msgstr ""
-
-#: content-link.php:4
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Link published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
-msgstr ""
-
-#: content-link.php:31
-#, php-format
-msgid ""
-"<div class=\"post-meta\">Link published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Link published by %1$s on %2$s | %3$s"
 msgstr ""
 
 #: content-none.php:4
@@ -147,167 +97,142 @@ msgstr ""
 msgid "But hey, you can always use our search form:"
 msgstr ""
 
-#: content-quote.php:4
+#: content-quote.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Quote published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Quote published by %1$s on %2$s"
 msgstr ""
 
-#: content-quote.php:36
+#: content-quote.php:44
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Quote published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Quote published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content-status.php:4
+#: content-status.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Status published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Status published by %1$s on %2$s"
 msgstr ""
 
-#: content-video.php:4
+#: content-video.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Video published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time></div>"
+msgid "Video published by %1$s on %2$s"
 msgstr ""
 
-#: content-video.php:39
+#: content-video.php:47
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Video published by <a href=\"%2$s\">%1$s</a> on "
-"<time>%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Video published by %1$s on %2$s | %3$s"
 msgstr ""
 
-#: content.php:4
+#: content.php:6
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Published by <a href=\"%2$s\">%1$s</a> on <time>"
-"%3$s</time></div>"
+msgid "Published by %1$s on %2$s"
 msgstr ""
 
-#: content.php:38
+#: content.php:46
 #, php-format
-msgid ""
-"<div class=\"post-meta\">Published by <a href=\"%2$s\">%1$s</a> on <time>"
-"%3$s</time> | <a href=\"%4$s\">Permalink</a></div>"
+msgid "Published by %1$s on %2$s | %3$s"
 msgstr ""
 
 #: footer.php:5
-msgid ""
-"<a target=\"_blank\" href=\"http://www.hardeepasrani.com/portfolio/latte/"
-"\">Latte</a><br/>Proudly powered by WordPress"
+msgid "Proudly powered by"
 msgstr ""
 
-#: functions.php:56 header.php:30
+#: functions.php:54 header.php:30
 msgid "Primary Menu"
 msgstr ""
 
-#: functions.php:95
+#: functions.php:93
 msgid "Sidear"
 msgstr ""
 
-#: functions.php:104 inc/customizer/customizer.php:91
+#: functions.php:102 inc/customizer/customizer.php:91
 msgid "Services Section"
 msgstr ""
 
-#: functions.php:113 inc/customizer/customizer.php:105
+#: functions.php:111 inc/customizer/customizer.php:105
 msgid "Skills Section"
 msgstr ""
 
-#: functions.php:122 inc/customizer/customizer.php:98
+#: functions.php:120 inc/customizer/customizer.php:98
 msgid "Subscribe Section"
 msgstr ""
 
-#: functions.php:131 inc/customizer/customizer.php:112
-msgid "Testimonials Section"
-msgstr ""
-
-#: functions.php:179
+#: functions.php:185
 msgid "Home"
 msgstr ""
 
-#: functions.php:180
+#: functions.php:186
 msgid "About"
 msgstr ""
 
-#: functions.php:181 inc/customizer/customizer.php:526 sections/social.php:2
+#: functions.php:187 inc/customizer/customizer.php:507 sections/social.php:2
 msgid "Social"
 msgstr ""
 
-#: functions.php:182 inc/customizer/customizer.php:641 sections/services.php:2
+#: functions.php:188 inc/customizer/customizer.php:622 sections/services.php:2
 msgid "Services"
 msgstr ""
 
-#: functions.php:183
+#: functions.php:189
 msgid "Separator"
 msgstr ""
 
-#: functions.php:184 inc/customizer/customizer.php:764 sections/skills.php:2
+#: functions.php:190 inc/customizer/customizer.php:745 sections/skills.php:2
 msgid "Skills"
 msgstr ""
 
-#: functions.php:185
+#: functions.php:191
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:186 inc/customizer/customizer.php:693
+#: functions.php:192 inc/customizer/customizer.php:674
 #: sections/subscribe.php:2
 msgid "Subscribe"
 msgstr ""
 
-#: functions.php:187
+#: functions.php:193
 msgid "Pricing"
 msgstr ""
 
-#: functions.php:188 inc/customizer/customizer.php:815
-#: sections/testimonials.php:2
-msgid "Testimonials"
-msgstr ""
-
-#: functions.php:189 inc/customizer/customizer.php:866
+#: functions.php:194 inc/customizer/customizer.php:796
 #: sections/blogposts.php:2
 msgid "Blog"
 msgstr ""
 
-#: functions.php:190
+#: functions.php:195
 msgid "Map"
 msgstr ""
 
-#: functions.php:191
+#: functions.php:196
 msgid "Contact"
 msgstr ""
 
-#: functions.php:208
+#: functions.php:213
 msgid "Pingback:"
 msgstr ""
 
-#: functions.php:208 functions.php:232
+#: functions.php:213 functions.php:237
 msgid "(Edit)"
 msgstr ""
 
-#: functions.php:220
+#: functions.php:225
 #, php-format
 msgid "<span>%s </span><span class=\"says\">says:</span>"
 msgstr ""
 
-#: functions.php:223
+#: functions.php:228
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: functions.php:228
+#: functions.php:233
 msgid "l, F j, Y, g:i a"
 msgstr ""
 
-#: functions.php:229
+#: functions.php:234
 #, php-format
 msgid "%1$s at %2$s"
 msgstr ""
 
-#: header.php:26 inc/customizer/customizer.php:162
+#: header.php:26 inc/customizer/customizer.php:155
 msgid "Menu"
 msgstr ""
 
@@ -399,224 +324,210 @@ msgstr ""
 msgid "This section allows you to configure Skills section."
 msgstr ""
 
-#: inc/customizer/customizer.php:113
-msgid "This section allows you to configure Testimonials section."
-msgstr ""
-
-#: inc/customizer/customizer.php:119
+#: inc/customizer/customizer.php:112
 msgid "Blog Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:120
+#: inc/customizer/customizer.php:113
 msgid "This section allows you to configure Blog section."
 msgstr ""
 
-#: inc/customizer/customizer.php:126
+#: inc/customizer/customizer.php:119
 msgid "Blog Page"
 msgstr ""
 
-#: inc/customizer/customizer.php:127
+#: inc/customizer/customizer.php:120
 msgid "This section allows you to configure Blog page."
 msgstr ""
 
-#: inc/customizer/customizer.php:134
+#: inc/customizer/customizer.php:127
 msgid "Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:140
+#: inc/customizer/customizer.php:133
 msgid "Header"
 msgstr ""
 
-#: inc/customizer/customizer.php:150 inc/customizer/customizer.php:317
+#: inc/customizer/customizer.php:143 inc/customizer/customizer.php:298
 msgid "Parallax Background"
 msgstr ""
 
-#: inc/customizer/customizer.php:156
+#: inc/customizer/customizer.php:149
 msgid "Preloader"
 msgstr ""
 
-#: inc/customizer/customizer.php:168
+#: inc/customizer/customizer.php:161
 msgid "Scroll Animations"
 msgstr ""
 
-#: inc/customizer/customizer.php:174 inc/customizer/customizer.php:192
-#: inc/customizer/customizer.php:210 inc/customizer/customizer.php:228
-#: inc/customizer/customizer.php:240 inc/customizer/customizer.php:258
-#: inc/customizer/customizer.php:270 inc/customizer/customizer.php:282
+#: inc/customizer/customizer.php:167 inc/customizer/customizer.php:185
+#: inc/customizer/customizer.php:203 inc/customizer/customizer.php:221
+#: inc/customizer/customizer.php:233 inc/customizer/customizer.php:251
+#: inc/customizer/customizer.php:263
 msgid "Settings"
 msgstr ""
 
-#: inc/customizer/customizer.php:180 inc/customizer/customizer.php:198
-#: inc/customizer/customizer.php:216 inc/customizer/customizer.php:288
-#: inc/customizer/customizer.php:493
+#: inc/customizer/customizer.php:173 inc/customizer/customizer.php:191
+#: inc/customizer/customizer.php:209 inc/customizer/customizer.php:269
+#: inc/customizer/customizer.php:474
 msgid "Content"
 msgstr ""
 
-#: inc/customizer/customizer.php:186 inc/customizer/customizer.php:204
-#: inc/customizer/customizer.php:222 inc/customizer/customizer.php:234
-#: inc/customizer/customizer.php:252 inc/customizer/customizer.php:264
-#: inc/customizer/customizer.php:276 inc/customizer/customizer.php:294
-#: inc/customizer/customizer.php:306
+#: inc/customizer/customizer.php:179 inc/customizer/customizer.php:197
+#: inc/customizer/customizer.php:215 inc/customizer/customizer.php:227
+#: inc/customizer/customizer.php:245 inc/customizer/customizer.php:257
+#: inc/customizer/customizer.php:275 inc/customizer/customizer.php:287
 msgid "Colors"
 msgstr ""
 
-#: inc/customizer/customizer.php:246
+#: inc/customizer/customizer.php:239
 msgid "Instructions"
 msgstr ""
 
-#: inc/customizer/customizer.php:300 inc/customizer/customizer.php:933
+#: inc/customizer/customizer.php:281 inc/customizer/customizer.php:863
 msgid "Layout"
 msgstr ""
 
-#: inc/customizer/customizer.php:330
+#: inc/customizer/customizer.php:311
 msgid "Disable Preloader"
 msgstr ""
 
-#: inc/customizer/customizer.php:342
+#: inc/customizer/customizer.php:323
 msgid "Disable Menu"
 msgstr ""
 
-#: inc/customizer/customizer.php:354
+#: inc/customizer/customizer.php:335
 msgid "Disable Scroll Animations"
 msgstr ""
 
-#: inc/customizer/customizer.php:366
+#: inc/customizer/customizer.php:347
 msgid "Disable Intro Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:378
+#: inc/customizer/customizer.php:359
 msgid "Avatar Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:391
+#: inc/customizer/customizer.php:372
 msgid "Scroll Anchor"
 msgstr ""
 
-#: inc/customizer/customizer.php:404 inc/customizer/customizer.php:507
-#: inc/customizer/customizer.php:610 inc/customizer/customizer.php:673
-#: inc/customizer/customizer.php:733 inc/customizer/customizer.php:796
-#: inc/customizer/customizer.php:847 inc/customizer/customizer.php:920
+#: inc/customizer/customizer.php:385 inc/customizer/customizer.php:488
+#: inc/customizer/customizer.php:591 inc/customizer/customizer.php:654
+#: inc/customizer/customizer.php:714 inc/customizer/customizer.php:777
+#: inc/customizer/customizer.php:850
 msgid "Background Color"
 msgstr ""
 
-#: inc/customizer/customizer.php:417
+#: inc/customizer/customizer.php:398
 msgid "Disable About Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:423 sections/about.php:2
+#: inc/customizer/customizer.php:404 sections/about.php:2
 msgid "About Me"
 msgstr ""
 
-#: inc/customizer/customizer.php:429 inc/customizer/customizer.php:532
-#: inc/customizer/customizer.php:647 inc/customizer/customizer.php:699
-#: inc/customizer/customizer.php:770 inc/customizer/customizer.php:821
-#: inc/customizer/customizer.php:872
+#: inc/customizer/customizer.php:410 inc/customizer/customizer.php:513
+#: inc/customizer/customizer.php:628 inc/customizer/customizer.php:680
+#: inc/customizer/customizer.php:751 inc/customizer/customizer.php:802
 msgid "Section Title"
 msgstr ""
 
-#: inc/customizer/customizer.php:436 sections/about.php:3
+#: inc/customizer/customizer.php:417 sections/about.php:3
 msgid "Here are some things that you should know about me."
 msgstr ""
 
-#: inc/customizer/customizer.php:442 inc/customizer/customizer.php:660
-#: inc/customizer/customizer.php:712 inc/customizer/customizer.php:783
-#: inc/customizer/customizer.php:834 inc/customizer/customizer.php:885
+#: inc/customizer/customizer.php:423 inc/customizer/customizer.php:641
+#: inc/customizer/customizer.php:693 inc/customizer/customizer.php:764
+#: inc/customizer/customizer.php:815
 msgid "Section Subtitle"
 msgstr ""
 
-#: inc/customizer/customizer.php:455
+#: inc/customizer/customizer.php:436
 msgid "Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:462 sections/about.php:5
+#: inc/customizer/customizer.php:443 sections/about.php:5
 msgid "John Doe"
 msgstr ""
 
-#: inc/customizer/customizer.php:475 sections/about.php:6
+#: inc/customizer/customizer.php:456 sections/about.php:6
 msgid "Web Designer"
 msgstr ""
 
-#: inc/customizer/customizer.php:481
+#: inc/customizer/customizer.php:462
 msgid "Position"
 msgstr ""
 
-#: inc/customizer/customizer.php:520
+#: inc/customizer/customizer.php:501
 msgid "Disable Social Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:545
+#: inc/customizer/customizer.php:526
 msgid "Facebook URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:558
+#: inc/customizer/customizer.php:539
 msgid "Twitter URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:571
+#: inc/customizer/customizer.php:552
 msgid "Google + URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:584
+#: inc/customizer/customizer.php:565
 msgid "Instagram URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:597
+#: inc/customizer/customizer.php:578
 msgid "Github URL"
 msgstr ""
 
-#: inc/customizer/customizer.php:623
+#: inc/customizer/customizer.php:604
 msgid "Disable Services Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:634 inc/customizer/customizer.php:757
+#: inc/customizer/customizer.php:615 inc/customizer/customizer.php:738
 msgid "Background Image"
 msgstr ""
 
-#: inc/customizer/customizer.php:654 sections/services.php:3
+#: inc/customizer/customizer.php:635 sections/services.php:3
 msgid "Things that I work on."
 msgstr ""
 
-#: inc/customizer/customizer.php:687
+#: inc/customizer/customizer.php:668
 msgid "Disable Subscribe Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:706 sections/subscribe.php:3
+#: inc/customizer/customizer.php:687 sections/subscribe.php:3
 msgid "I won't spam you, promise!"
 msgstr ""
 
-#: inc/customizer/customizer.php:746
+#: inc/customizer/customizer.php:727
 msgid "Disable Skills Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:777 sections/skills.php:3
+#: inc/customizer/customizer.php:758 sections/skills.php:3
 msgid "Things that I'm good at."
 msgstr ""
 
-#: inc/customizer/customizer.php:809
-msgid "Disable Testimonials Section"
-msgstr ""
-
-#: inc/customizer/customizer.php:828 sections/testimonials.php:3
-msgid "Here's what the clients have to say."
-msgstr ""
-
-#: inc/customizer/customizer.php:860
+#: inc/customizer/customizer.php:790
 msgid "Disable Blog Section"
 msgstr ""
 
-#: inc/customizer/customizer.php:879 sections/blogposts.php:3
+#: inc/customizer/customizer.php:809 sections/blogposts.php:3
 msgid "My thoughts."
 msgstr ""
 
-#: inc/customizer/customizer.php:898
+#: inc/customizer/customizer.php:828
 msgid "Number of Items"
 msgstr ""
 
-#: inc/customizer/customizer.php:937
+#: inc/customizer/customizer.php:867
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer/customizer.php:938
+#: inc/customizer/customizer.php:868
 msgid "Left Sidebar"
 msgstr ""
 
@@ -678,22 +589,6 @@ msgstr ""
 
 #: inc/widgets/latte-skills.php:41
 msgid "Bar Background"
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:12
-msgid "Latte - Testimonials Widget"
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:13
-msgid "Testimonials widget for Latte theme's Testimonials section."
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:23
-msgid "Testimonial"
-msgstr ""
-
-#: inc/widgets/latte-testimonials.php:31
-msgid "Position/Company"
 msgstr ""
 
 #: search.php:26
@@ -779,44 +674,6 @@ msgstr ""
 
 #: sections/social.php:55
 msgid "Github"
-msgstr ""
-
-#: sections/testimonials.php:31
-msgid ""
-"\"Design is not just what it looks like and feels like. Design is how it "
-"works.\""
-msgstr ""
-
-#: sections/testimonials.php:32
-msgid "Steve Jobs"
-msgstr ""
-
-#: sections/testimonials.php:33
-msgid "Apple"
-msgstr ""
-
-#: sections/testimonials.php:36
-msgid "\"Your most unhappy customers are your greatest source of learning.\""
-msgstr ""
-
-#: sections/testimonials.php:37
-msgid "Bill Gates"
-msgstr ""
-
-#: sections/testimonials.php:38
-msgid "Microsoft"
-msgstr ""
-
-#: sections/testimonials.php:41
-msgid "\"I've actually not read any books on time management.\""
-msgstr ""
-
-#: sections/testimonials.php:42
-msgid "Elon Musk"
-msgstr ""
-
-#: sections/testimonials.php:43
-msgid "Tesla Motors"
 msgstr ""
 
 #: single.php:32
