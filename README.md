@@ -8,28 +8,46 @@ Latte is a one-page parallax WordPress theme for developers, designers & freelan
 4. Click *Activate* to use the theme you just installed.
 
 # Copyright, License & Other info #
-License: [GNU General Public License v2.0] (license.txt file)
+
+License: [GNU General Public License v2.0] or later (license.txt file)
 Unless otherwise specified, all the theme files, scripts and images are licensed under GNU General Public License. See License URI in style.css for further details.
 
-All the images are GPL 2.0 compatible and are taken from: https://pixabay.com/
+## Libraries ##
 
-Font Awesome icon fonts are licensed under the terms of the GNU GPL, Version 2 (or later).
-Source: http://fortawesome.github.io/Font-Awesome/
+Alpha Color Picker, https://github.com/BraadMartin/components/tree/master/customizer/alpha-color-picker
+Copyright © 2015 Braad Martin, Inc, GPL License (version not specified), http://www.gnu.org/licenses/gpl-3.0.en.html
 
-classie.js is released under the MIT license.
-Source: https://github.com/desandro/classie
+Bootstrap, http://getbootstrap.com/
+Copyright © 2011-2015 Twitter, Inc, MIT License, http://www.opensource.org/licenses/MIT
 
-jquery.matchHeight.js is licensed under the MIT License.
-Source: http://brm.io/jquery-match-height/
+classie.js, https://github.com/desandro/classie
+Copyright © 2014, desandro, MIT License, http://www.opensource.org/licenses/MIT
 
-parallax.js is licensed under the MIT License.
-Source: http://pixelcog.github.io/parallax.js/
+FontAwesome, http://fontawesome.io/
+Copyright © 2015, Dave Gandy,
+Font Awesome licensed under SIL OFL 1.1, http://scripts.sil.org/OFL
+Code licensed under MIT License, http://www.opensource.org/licenses/MIT
+Documentation licensed under CC BY 3.0, http://creativecommons.org/licenses/by/3.0/
 
-scrollReveal.js is licensed under the MIT License.
-Source: https://scrollrevealjs.org/
+jquery.matchHeight.js, http://brm.io/jquery-match-height/
+Copyright © 2014, liabru, MIT License, http://www.opensource.org/licenses/MIT
 
-swiper.js is licensed under the MIT License.
-Source: http://www.idangero.us/swiper/
+parllax.js, http://pixelcog.github.io/parallax.js/
+Copyright © 2015, PixelCog Inc, MIT License, http://www.opensource.org/licenses/MIT
 
-# Support #
-Please visit http://wordpress.org/support/ if you have any questions about the theme.
+Post Format Tools from Hybrid Core , https://github.com/justintadlock/hybrid-core
+2008 – 2015 © Justin Tadlock, GNU GPL, version 2 or later, http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+scrollReveal.js, https://scrollrevealjs.org/
+Copyright © 2015, Julian Lloyd, MIT License, http://www.opensource.org/licenses/MIT
+
+## Images ##
+
+avatar.jpg, https://pixabay.com/en/hoodie-sweater-dark-night-evening-691449/
+Copyright © 2015, Unsplash, CC0 Public Domain, https://creativecommons.org/publicdomain/zero/1.0/deed.en
+
+background.jpg, https://pixabay.com/en/pencils-writing-write-blog-blogger-762555/
+Copyright © 2015, StockSlap, CC0 Public Domain, https://creativecommons.org/publicdomain/zero/1.0/deed.en
+
+blog.jpg, https://pixabay.com/en/pencils-writing-write-blog-blogger-762555/
+Copyright © 2015, kaboompics, CC0 Public Domain, https://creativecommons.org/publicdomain/zero/1.0/deed.en
