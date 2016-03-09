@@ -19,7 +19,7 @@
 					<?php if(!empty($latte_social_facebook)) : ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-lg-2 col-sm-2 social-box">
 							<div class="icon-item it-facebook">
-								<div class="icon"><a href="<?php echo $latte_social_facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a></div>
+								<div class="icon"><a href="<?php echo esc_url($latte_social_facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a></div>
 								<span><?php _e( 'Facebook', 'latte' ); ?></span>
 							</div>
 						</div>
@@ -27,7 +27,7 @@
 					<?php if(!empty($latte_social_twitter)) : ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-lg-2 col-sm-2 social-box">
 							<div class="icon-item it-twitter">
-								<div class="icon"><a href="<?php echo $latte_social_twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
+								<div class="icon"><a href="<?php echo esc_url($latte_social_twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a></div>
 								<span><?php _e( 'Twitter', 'latte' ); ?></span>
 							</div>
 						</div>
@@ -35,7 +35,7 @@
 					<?php if(!empty($latte_social_google_plus)) : ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-lg-2 col-sm-2 social-box">
 							<div class="icon-item it-google">
-								<div class="icon"><a href="<?php echo $latte_social_google_plus; ?>" target="_blank"><i class="fa fa-google"></i></a></div>
+								<div class="icon"><a href="<?php echo esc_url($latte_social_google_plus); ?>" target="_blank"><i class="fa fa-google"></i></a></div>
 								<span><?php _e( 'Google +', 'latte' ); ?></span>
 							</div>
 						</div>
@@ -43,7 +43,7 @@
 					<?php if(!empty($latte_social_instagram)) : ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-lg-2 col-sm-2 social-box">
 							<div class="icon-item it-instagram">
-								<div class="icon"><a href="<?php echo $latte_social_instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a></div>
+								<div class="icon"><a href="<?php echo esc_url($latte_social_instagram); ?>" target="_blank"><i class="fa fa-instagram"></i></a></div>
 								<span><?php _e( 'Instagram', 'latte' ); ?></span>
 							</div>
 						</div>
@@ -51,7 +51,7 @@
 					<?php if(!empty($latte_social_github)) : ?>
 						<div data-sr="ease-in-out wait 0.25s" class="col-lg-2 col-sm-2 social-box">
 							<div class="icon-item it-github">
-								<div class="icon"><a href="<?php echo $latte_social_github; ?>" target="_blank"><i class="fa fa-github"></i></a></div>
+								<div class="icon"><a href="<?php echo esc_url($latte_social_github); ?>" target="_blank"><i class="fa fa-github"></i></a></div>
 								<span><?php _e( 'Github', 'latte' ); ?></span>
 							</div>
 						</div>

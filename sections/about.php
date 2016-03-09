@@ -13,16 +13,16 @@
 				<?php if(!empty($latte_about_title) || !empty($latte_about_subtitle)) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="about-header">
 					<?php if(!empty($latte_about_title)) : ?>
-						<h2><?php echo $latte_about_title; ?></h2>
+						<h2><?php echo esc_html($latte_about_title); ?></h2>
 					<?php endif; ?>
 					<?php if(!empty($latte_about_subtitle)) : ?>
-						<h3><?php echo $latte_about_subtitle; ?></h3>
+						<h3><?php echo esc_html($latte_about_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
 				<?php endif; ?>
 				<?php if(!empty($latte_about_avatar)) : ?>
 					<div data-sr="enter left wait 0.25s" class="col-md-5">
-						<img src="<?php echo $latte_about_avatar; ?>" class="about-image img-responsive">
+						<img src="<?php echo esc_url($latte_about_avatar); ?>" class="about-image img-responsive">
 					</div>
 				<?php endif; ?>
 				<?php if(!empty($latte_about_avatar)) : ?>
@@ -31,13 +31,13 @@
 					<div data-sr="enter top wait 0.25s" class="col-md-12">
 				<?php endif; ?>
 					<?php if(!empty($latte_about_name)) : ?>
-						<h3 class="name"><?php echo $latte_about_name; ?></h3>
+						<h3 class="name"><?php echo esc_html($latte_about_name); ?></h3>
 					<?php endif; ?>
 					<?php if(!empty($latte_about_position)) : ?>
-						<span class="text-muted"><?php echo $latte_about_position; ?></span>
+						<span class="text-muted"><?php echo esc_html($latte_about_position); ?></span>
 					<?php endif; ?>
 					<?php if(!empty($latte_about_content)) : ?>
-						<div class="lead"><?php echo $latte_about_content; ?></div>
+						<div class="lead"><?php echo wp_kses_post($latte_about_content); ?></div>
 					<?php endif; ?>
 					</div>
 				</div>

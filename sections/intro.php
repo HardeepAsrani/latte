@@ -7,12 +7,12 @@
 			<div class="cover-container row">
 				<div class="inner cover col-md-12">
 				<?php if(!empty($latte_intro_avatar)) : ?>
-					<div class="avatar" style="background-image:url('<?php echo $latte_intro_avatar; ?>');"></div>
+					<div class="avatar" style="background-image:url('<?php echo esc_url($latte_intro_avatar); ?>');"></div>
 				<?php endif; ?>
 					<h1 class="cover-heading"><?php bloginfo( 'name' ); ?></h1>
 					<p class="lead"><?php bloginfo( 'description' ); ?></p>
 					<?php if(!empty($latte_intro_scroll)) : ?>
-						<a href="<?php echo $latte_intro_scroll; ?>" class="arrow"><i class="fa fa-arrow-circle-down"></i></a>
+						<a href="<?php echo esc_url($latte_intro_scroll); ?>" class="arrow"><i class="fa fa-arrow-circle-down"></i></a>
 					<?php endif; ?>
 				</div>
 			</div>
