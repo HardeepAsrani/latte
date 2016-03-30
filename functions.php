@@ -11,70 +11,72 @@ require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
 
-function latte_setup() {
-	// Using this feature you can set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.  https://codex.wordpress.org/Content_Width
-	global $content_width;
-	if (!isset($content_width)) {
-		$content_width = 796;
+if (!function_exists('latte_setup')) {
+	function latte_setup() {
+		// Using this feature you can set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.  https://codex.wordpress.org/Content_Width
+		global $content_width;
+		if (!isset($content_width)) {
+			$content_width = 796;
+		}
+
+		// Takes care of the <title> tag. https://codex.wordpress.org/Title_Tag
+		add_theme_support('title-tag');
+		
+		// Loads texdomain. https://codex.wordpress.org/Function_Reference/load_theme_textdomain
+		load_theme_textdomain('latte', get_template_directory() . '/languages');
+
+		// Add automatic feed links support. https://codex.wordpress.org/Automatic_Feed_Links
+		add_theme_support('automatic-feed-links');
+
+		// Add post thumbnails support. https://codex.wordpress.org/Post_Thumbnails
+		add_theme_support('post-thumbnails');
+
+		// Add custom background support. https://codex.wordpress.org/Custom_Backgrounds
+		add_theme_support('custom-background', array(
+			// Default color
+			'default-color' => 'FFF',
+		));
+
+		// Add custom header support. https://codex.wordpress.org/Custom_Headers
+		add_theme_support('custom-header', array(
+			// Flex height
+			'flex-height' => true,
+			// Header image
+			'default-image' => get_template_directory_uri() . '/assets/images/blog.jpg',
+			// Header text
+			'header-text' => false,
+		));
+
+		// Add post formats support. https://codex.wordpress.org/Post_Formats#Adding_Theme_Support
+		add_theme_support('post-formats', array( 'aside', 'chat', 'link', 'quote', 'status', 'video' ));
+
+		// This theme uses wp_nav_menu(). https://codex.wordpress.org/Function_Reference/register_nav_menu
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'latte' ),
+		));
+		
+		// Adding image sizes. https://developer.wordpress.org/reference/functions/add_image_size/
+		add_image_size( 'latte-blogposts', 287, 230, true );
+		
+		// This theme styles the visual editor to resemble the theme style. https://codex.wordpress.org/Function_Reference/add_editor_style
+		$font_lora = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
+		$font_open_sans = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
+		$font_sanchez = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Sanchez:400,400italic' );
+		add_editor_style( array(
+			get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css',
+			get_template_directory_uri() . '/assets/css/editor-style.css',
+			$font_lora,
+			$font_open_sans,
+			$font_sanchez
+		) );
+		
+		// Added WooCommerce support
+		add_theme_support( 'woocommerce' );
+		
 	}
 
-	// Takes care of the <title> tag. https://codex.wordpress.org/Title_Tag
-	add_theme_support('title-tag');
-	
-	// Loads texdomain. https://codex.wordpress.org/Function_Reference/load_theme_textdomain
-	load_theme_textdomain('latte', get_template_directory() . '/languages');
-
-	// Add automatic feed links support. https://codex.wordpress.org/Automatic_Feed_Links
-	add_theme_support('automatic-feed-links');
-
-	// Add post thumbnails support. https://codex.wordpress.org/Post_Thumbnails
-	add_theme_support('post-thumbnails');
-
-	// Add custom background support. https://codex.wordpress.org/Custom_Backgrounds
-	add_theme_support('custom-background', array(
-		// Default color
-		'default-color' => 'FFF',
-	));
-
-	// Add custom header support. https://codex.wordpress.org/Custom_Headers
-	add_theme_support('custom-header', array(
-		// Flex height
-		'flex-height' => true,
-		// Header image
-		'default-image' => get_template_directory_uri() . '/assets/images/blog.jpg',
-		// Header text
-		'header-text' => false,
-	));
-
-	// Add post formats support. https://codex.wordpress.org/Post_Formats#Adding_Theme_Support
-	add_theme_support('post-formats', array( 'aside', 'chat', 'link', 'quote', 'status', 'video' ));
-
-	// This theme uses wp_nav_menu(). https://codex.wordpress.org/Function_Reference/register_nav_menu
-	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'latte' ),
-	));
-	
-	// Adding image sizes. https://developer.wordpress.org/reference/functions/add_image_size/
-	add_image_size( 'latte-blogposts', 287, 230, true );
-	
-	// This theme styles the visual editor to resemble the theme style. https://codex.wordpress.org/Function_Reference/add_editor_style
-	$font_lora = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Lato:300,400,700' );
-	$font_open_sans = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' );
-	$font_sanchez = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Sanchez:400,400italic' );
-	add_editor_style( array(
-		get_template_directory_uri() . '/assets/bootstrap/css/bootstrap.min.css',
-		get_template_directory_uri() . '/assets/css/editor-style.css',
-		$font_lora,
-		$font_open_sans,
-		$font_sanchez
-	) );
-	
-	// Added WooCommerce support
-	add_theme_support( 'woocommerce' );
-	
+	add_action( 'after_setup_theme', 'latte_setup' );
 }
-
-add_action( 'after_setup_theme', 'latte_setup' );
 
 // To add backwards compatibility for titles
 if ( ! function_exists( '_wp_render_title_tag' ) ) {
@@ -186,14 +188,9 @@ function latte_new_setup() {
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#about' ) ) . '">'. __('About', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#social' ) ) . '">'. __('Social', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#services' ) ) . '">'. __('Services', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#separator' ) ) . '">'. __('Separator', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#skills' ) ) . '">'. __('Skills', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#portfolio' ) ) . '">'. __('Portfolio', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#subscribe' ) ) . '">'. __('Subscribe', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#pricing' ) ) . '">'. __('Pricing', 'latte') .'</a></li>';
 		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#blogposts' ) ) . '">'. __('Blog', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#map' ) ) . '">'. __('Map', 'latte') .'</a></li>';
-		echo '<li class="menu-item"><a href="' . esc_url( home_url( '/#contact' ) ) . '">'. __('Contact', 'latte') .'</a></li>';
 	echo '</ul>';
 	echo '</div>';
 
