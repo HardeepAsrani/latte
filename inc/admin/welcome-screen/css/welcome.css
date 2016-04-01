@@ -1,0 +1,118 @@
+.appearance_page_latte-welcome .col {
+	margin-bottom: 0;
+}
+.appearance_page_latte-welcome .col2-set::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.appearance_page_latte-welcome .col2-set .col-1,
+.appearance_page_latte-welcome .col2-set .col-2 {
+	width: 48%;
+	float: left;
+}
+.appearance_page_latte-welcome .col2-set .col-2 {
+	float: right;
+}
+.appearance_page_latte-welcome .latte-title {
+	float: left;
+	margin-bottom: .53em;
+}
+.appearance_page_latte-welcome .version {
+	font-size: 30%;
+	padding: 0.387em 0.857em;
+	border-radius: 3px;
+	background-color: #f1f1f1;
+	font-weight: 700;
+}
+.appearance_page_latte-welcome .activated {
+	text-transform: uppercase;
+	color: #fff;
+	background: #45B964;
+	display: inline-block;
+	padding: 2px 8px;
+	float: right;
+	margin: 0;
+	font-size: .75em !important;
+	border-radius: 3px;
+}
+.appearance_page_latte-welcome .boxed {
+	padding: 1.387em 2.244em;
+	background: #fff;
+	box-sizing: border-box;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	position: relative;
+	margin-bottom: 2.618em;
+}
+.appearance_page_latte-welcome .boxed > h2:first-child {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+.appearance_page_latte-welcome .boxed .button {
+	line-height: 16px;
+	height: 38px;
+	padding: 10px 20px;
+}
+.appearance_page_latte-welcome .boxed p,
+.appearance_page_latte-welcome .boxed ul {
+	font-size: .857em;
+}
+.appearance_page_latte-welcome .boxed ul.extensions::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+.appearance_page_latte-welcome .boxed ul.extensions li {
+	width: 48%;
+	float: left;
+}
+.appearance_page_latte-welcome .boxed ul.extensions li:nth-child(2n) {
+	float: right;
+}
+.appearance_page_latte-welcome .boxed:before {
+	content: "\f309";
+	display: block;
+	position: absolute;
+	top: 1.387em;
+	right: 1.387em;
+	font-size: 1.618em;
+	font-family: 'Dashicons';
+	font-weight: 400;
+	-webkit-font-smoothing: antialiased;
+}
+.appearance_page_latte-welcome .boxed.enrich:before {
+	content: "\f472";
+}
+.appearance_page_latte-welcome .boxed.whatsnew:before {
+	content: "\f502";
+}
+.appearance_page_latte-welcome .boxed.donate:before {
+	content: "\f487";
+}
+.appearance_page_latte-welcome .boxed.support:before {
+	content: "\f468";
+}
+.appearance_page_latte-welcome .boxed.extension:before {
+	content: "\f112";
+}
+.appearance_page_latte-welcome .boxed.downloaded:before {
+	content: "";
+}
+.appearance_page_latte-welcome .boxed.news .col2-set h4 {
+	font-size: .857em;
+	text-tranlatteorm: uppercase;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	color: #999;
+}
+.appearance_page_latte-welcome .image-latte {
+	width: 100%;
+	text-align: center;
+}
+@media screen and (max-width: 782px) {
+	.about-wrap [class$="col"] .col {
+		margin: 0px !important;
+		padding: 0px !important;
+	}
+}

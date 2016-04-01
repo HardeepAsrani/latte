@@ -10,6 +10,9 @@ require_once( trailingslashit( get_template_directory() ) . "/inc/customizer/cus
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-services.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/widgets/latte-skills.php" );
 require_once( trailingslashit( get_template_directory() ) . "/inc/other/post-formats.php" );
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
+}
 
 if (!function_exists('latte_setup')) {
 	function latte_setup() {
@@ -220,7 +223,7 @@ function latte_comment($comment, $args, $depth) {
 						<div class="comment-author vcard" >
 							<?php echo get_avatar( $comment, $args['avatar_size'] ); ?>
 							<?php printf( __( '<span>%s </span><span class="says">says:</span>', 'latte' ), sprintf( '<b class="fn">%s</b>', get_comment_author_link() ) ); ?>
-						</div><!-- .comment-author .vcard -->
+						</div>
 						<?php if ( $comment->comment_approved == '0' ) : ?>
 							<em><?php _e( 'Your comment is awaiting moderation.', 'latte' ); ?></em>
 							<br />
@@ -232,15 +235,15 @@ function latte_comment($comment, $args, $depth) {
 								</time>
 							</a>
 							<?php edit_comment_link( __( '(Edit)', 'latte' ), ' ' );?>
-						</div><!-- .comment-meta .commentmetadata -->
+						</div>
 					</footer>
 
 					<div class="comment-content"><?php comment_text(); ?></div>
 
 					<div class="reply">
 						<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-					</div><!-- .reply -->
-				</article><!-- #comment-## -->
+					</div>
+				</article>
 
 <?php
 		break;
