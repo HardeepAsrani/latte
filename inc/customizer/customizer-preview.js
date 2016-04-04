@@ -19,11 +19,11 @@
 	// Intro Section > Content > Avatar Image
 	wp.customize( 'latte_intro_avatar', function( value ) {
 		value.bind( function( newval ) {
-			$('.intro .avatar').css( 'background-image', 'url(' +newval+')' );
+			$('.intro .avatar').css( 'background-image', 'url(' +newval+ ')' );
 		} );
 	} );
 
-	// Intro Section > Content > Background Color
+	// Intro Section > Colors > Background Color
 	wp.customize( 'latte_intro_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.intro').css( 'background', newval );
@@ -79,7 +79,7 @@
 		} );
 	} );
 
-	// About Section > Content > Background Color
+	// About Section > Colors > Background Color
 	wp.customize( 'latte_about_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.about').css( 'background', newval );
@@ -93,7 +93,7 @@
 		} );
 	} );
 
-	// Social Section > Content > Background Color
+	// Social Section > Colors > Background Color
 	wp.customize( 'latte_social_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.social').css( 'background', newval );
@@ -114,7 +114,7 @@
 		} );
 	} );
 
-	// Services Section > Content > Background Color
+	// Services Section > Colors > Background Color
 	wp.customize( 'latte_services_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.services').css( 'background', newval );
@@ -135,7 +135,7 @@
 		} );
 	} );
 
-	// Subscribe Section > Content > Background Color
+	// Subscribe Section > Colors > Background Color
 	wp.customize( 'latte_subscribe_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.subscribe').css( 'background', newval );
@@ -156,7 +156,7 @@
 		} );
 	} );
 
-	// Skills Section > Content > Background Color
+	// Skills Section > Colors > Background Color
 	wp.customize( 'latte_skills_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.skills').css( 'background', newval );
@@ -177,18 +177,18 @@
 		} );
 	} );
 
-	// Blog Section > Content > Background Color
+	// Blog Section > Colors > Background Color
 	wp.customize( 'latte_blogposts_background_color', function( value ) {
 		value.bind( function( newval ) {
 			$('.blogposts').css( 'background', newval );
 		} );
 	} );
 
-    // Blog Page > Header
-    wp.customize( 'header_image', function( value ) {
-        value.bind( function( newval ) {
-            $('.archive-header').css( 'background', 'transparent url(' +newval+ ') repeat scroll center center / cover' );
-        } );
-    } );
+	// Blog Page > Header
+	wp.customize( 'header_image', function( value ) {
+		value.bind( function( newval ) {
+			$('.archive-header').css( 'background', 'transparent url(' +newval+ ') repeat scroll center center / cover' );
+		} );
+	} );
 	
 } )( jQuery );
