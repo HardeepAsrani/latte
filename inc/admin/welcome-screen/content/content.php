@@ -32,8 +32,8 @@ $latte = wp_get_theme( 'latte' );
 			<h2><?php esc_html_e( 'Get Latte Pro', 'latte' ); ?></h2>
 			<p><?php printf( esc_html__( 'Latte Pro comes with additional 5 additional front-page sections, 100+ color options and more. It allows you to add a Portfolio to your site and many more amazing features.', 'latte' ) ); ?></p>
 			<p>
-				<a href="https://goo.gl/ySDdIw" class="button button-primary" target="_blank"><?php esc_html_e( 'Why go Pro?', 'latte' ); ?></a>
-				<a href="https://goo.gl/ySDdIw" class="button button-primary" target="_blank"><?php esc_html_e( 'Go Pro!', 'latte' ); ?></a>
+				<a href="http://www.hardeepasrani.com/latte-vs-latte-pro/" class="button button-primary" target="_blank"><?php esc_html_e( 'Why go Pro?', 'latte' ); ?></a>
+				<a href="http://www.hardeepasrani.com/portfolio/latte/" class="button button-primary" target="_blank"><?php esc_html_e( 'Go Pro!', 'latte' ); ?></a>
 			</p>
 		</div>
 	</div>
