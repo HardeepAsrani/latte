@@ -16,7 +16,7 @@ jQuery(window).load(function() {
 jQuery(document).ready(function($) {
 	if( latte_script_var.latte_is_homepage != 1 ) {
 		/* Smooth Scroll */
-		jQuery('a[href*=#]').click(function() {
+		jQuery('a[href*="#"]').click(function() {
 			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 				var target = jQuery(this.hash);
 				target = target.length ? target : jQuery('[name=' + this.hash.slice(1) +']');
