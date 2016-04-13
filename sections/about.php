@@ -36,7 +36,7 @@
 					<?php if(!empty($latte_about_position)) : ?>
 						<span class="text-muted"><?php echo esc_html($latte_about_position); ?></span>
 					<?php endif; ?>
-					<?php if(!empty($latte_about_content)) : ?>
+					<?php if(!empty($latte_about_content) || is_customize_preview() ) : ?>
 						<div class="lead"><?php echo wp_kses_post($latte_about_content); ?></div>
 					<?php endif; ?>
 					</div>
