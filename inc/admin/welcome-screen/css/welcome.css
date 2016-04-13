@@ -110,6 +110,10 @@
 	width: 100%;
 	text-align: center;
 }
+.about-wrap h2 {
+	margin: 1em 0;
+	text-align: left;
+}
 @media screen and (max-width: 782px) {
 	.about-wrap [class$="col"] .col {
 		margin: 0px !important;
