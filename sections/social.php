@@ -15,7 +15,7 @@
 		<section class="social" id="social">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_social_title)) : ?>
+				<?php if(!empty($latte_social_title) || is_customize_preview() ) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="social-header">
 						<h2><?php echo $latte_social_title; ?></h2>
 					</header>

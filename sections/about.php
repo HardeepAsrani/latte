@@ -10,12 +10,12 @@
 		<section class="about" id="about">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_about_title) || !empty($latte_about_subtitle)) : ?>
+				<?php if(!empty($latte_about_title) || !empty($latte_about_subtitle) || is_customize_preview() ) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="about-header">
-					<?php if(!empty($latte_about_title)) : ?>
+					<?php if(!empty($latte_about_title) || is_customize_preview() ) : ?>
 						<h2><?php echo esc_html($latte_about_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_about_subtitle)) : ?>
+					<?php if(!empty($latte_about_subtitle) || is_customize_preview() ) : ?>
 						<h3><?php echo esc_html($latte_about_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
@@ -30,10 +30,10 @@
 				<?php else: ?>
 					<div data-sr="enter top wait 0.25s" class="col-md-12">
 				<?php endif; ?>
-					<?php if(!empty($latte_about_name)) : ?>
+					<?php if(!empty($latte_about_name) || is_customize_preview() ) : ?>
 						<h3 class="name"><?php echo esc_html($latte_about_name); ?></h3>
 					<?php endif; ?>
-					<?php if(!empty($latte_about_position)) : ?>
+					<?php if(!empty($latte_about_position) || is_customize_preview() ) : ?>
 						<span class="text-muted"><?php echo esc_html($latte_about_position); ?></span>
 					<?php endif; ?>
 					<?php if(!empty($latte_about_content) || is_customize_preview() ) : ?>

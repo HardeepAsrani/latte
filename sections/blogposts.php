@@ -7,12 +7,12 @@
 		<section class="blogposts" id="blogposts">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_blogposts_title) || !empty($latte_blogposts_subtitle)) : ?>
+				<?php if(!empty($latte_blogposts_title) || !empty($latte_blogposts_subtitle) || is_customize_preview() ) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="blog-header">
-					<?php if(!empty($latte_blogposts_title)) : ?>
+					<?php if(!empty($latte_blogposts_title) || is_customize_preview() ) : ?>
 						<h2><?php echo esc_html($latte_blogposts_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_blogposts_subtitle)) : ?>
+					<?php if(!empty($latte_blogposts_subtitle) || is_customize_preview() ) : ?>
 						<h3><?php echo esc_html($latte_blogposts_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>

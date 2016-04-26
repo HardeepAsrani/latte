@@ -6,12 +6,12 @@
 		<section class="skills" id="skills">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_skills_title) || !empty($latte_skills_subtitle)) : ?>
+				<?php if(!empty($latte_skills_title) || !empty($latte_skills_subtitle) || is_customize_preview() ) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="skills-header">
 					<?php if(!empty($latte_skills_title)) : ?>
 						<h2><?php echo esc_html($latte_skills_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_skills_subtitle)) : ?>
+					<?php if(!empty($latte_skills_subtitle) || is_customize_preview() ) : ?>
 						<h3><?php echo esc_html($latte_skills_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
