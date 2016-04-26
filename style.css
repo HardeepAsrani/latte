@@ -331,19 +331,19 @@ img.alignright,
 	display: inline-block;
 	margin: 30px 0;
 }
-.social .row .social-box .it-facebook .icon:hover {
+.social .row .social-box .it-first .icon:hover {
 	background: #3B5998;
 }
-.social .row .social-box .it-twitter .icon:hover {
+.social .row .social-box .it-second .icon:hover {
 	background: #0084B4;
 }
-.social .row .social-box .it-google .icon:hover {
+.social .row .social-box .it-third .icon:hover {
 	background: #D34836;
 }
-.social .row .social-box .it-instagram .icon:hover {
-	background: #3F729b;
+.social .row .social-box .it-fourth .icon:hover {
+	background: #3F729B;
 }
-.social .row .social-box .it-github .icon:hover {
+.social .row .social-box .it-fifth .icon:hover {
 	background: #000;
 }
 .icon-item .icon {
@@ -363,6 +363,49 @@ img.alignright,
 .icon-item .icon i {
 	font-size: 50px;
 	line-height: 1.7;
+}
+
+.icon-item .icon a[href*="facebook.com"] i::before {
+	content: '\f09a';
+}
+.icon-item .icon a[href*="twitter.com"] i::before {
+	content: '\f099';
+}
+.icon-item .icon a[href*="plus.google.com"] i::before {
+	content: '\f0d5';
+}
+.icon-item .icon a[href*="instagram.com"] i::before {
+	content: '\f16d';
+}
+.icon-item .icon a[href*="github.com"] i::before {
+	content: '\f09b';
+}
+.icon-item .icon a[href*="dribbble.com"] i::before {
+	content: '\f17d';
+}
+.icon-item .icon a[href*="pinterest.com"] i::before {
+	content: '\f0d2';
+}
+.icon-item .icon a[href*="youtube.com"] i::before {
+	content: '\f167';
+}
+.icon-item .icon a[href*="flickr.com"] i::before {
+	content: '\f16e';
+}
+.icon-item .icon a[href*="vimeo.com"] i::before {
+	content: '\f194';
+}
+.icon-item .icon a[href*="linkedin.com"] i::before {
+	content: '\f0e1';
+}
+.icon-item .icon a[href*="foursquare.com"] i::before {
+	content: '\f180';
+}
+.icon-item .icon a[href*="tumblr.com"] i::before {
+	content: '\f173';
+}
+.icon-item .icon a[href*="twitch.tv"] i::before {
+	content: '\f1e8';
 }
 
 /*

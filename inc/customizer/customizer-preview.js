@@ -93,6 +93,76 @@
 		} );
 	} );
 
+	// Social Section > Content > 1. Icon URL
+	wp.customize( 'latte_social_facebook', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-first .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 1. Icon Title
+	wp.customize( 'latte_social_facebook_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-first span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon URL
+	wp.customize( 'latte_social_twitter', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-second .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 2. Icon Title
+	wp.customize( 'latte_social_twitter_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-second span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon URL
+	wp.customize( 'latte_social_google_plus', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-third .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 3. Icon Title
+	wp.customize( 'latte_social_google_plus_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-third span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon URL
+	wp.customize( 'latte_social_instagram', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-fourth .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 4. Icon Title
+	wp.customize( 'latte_social_instagram_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fourth span').text( newval );
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon URL
+	wp.customize( 'latte_social_github', function( value ) {
+		value.bind( function( newval ) {
+			$('.it-fifth .icon a').attr( 'href', newval );
+		} );
+	} );
+
+	// Social Section > Content > 5. Icon Title
+	wp.customize( 'latte_social_github_title', function( value ) {
+		value.bind( function( newval ) {
+			$('.social .it-fifth span').text( newval );
+		} );
+	} );
+
 	// Social Section > Colors > Background Color
 	wp.customize( 'latte_social_background_color', function( value ) {
 		value.bind( function( newval ) {

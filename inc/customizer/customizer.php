@@ -540,68 +540,143 @@ function latte_customize_register($wp_customize) {
 	));
 
 	$wp_customize->add_setting('latte_social_facebook', array(
-		'default' => '#',
+		'default' => 'https://www.facebook.com',
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'esc_url_raw',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control('latte_social_facebook', array(
-		'label' => __('Facebook URL', 'latte'),
+		'label' => __('1. Icon URL', 'latte'),
 		'section' => 'latte_social_content',
 		'priority' => 5,
 		'settings' => 'latte_social_facebook'
 	));
 
-	$wp_customize->add_setting('latte_social_twitter', array(
-		'default' => '#',
+	$wp_customize->add_setting('latte_social_facebook_title', array(
+		'default' => __('Facebook', 'latte'),
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('latte_social_facebook_title', array(
+		'label' => __('1. Icon Title', 'latte'),
+		'section' => 'latte_social_content',
+		'priority' => 10,
+		'settings' => 'latte_social_facebook_title'
+	));
+
+	$wp_customize->add_setting('latte_social_twitter', array(
+		'default' => 'https://www.twitter.com',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control('latte_social_twitter', array(
-		'label' => __('Twitter URL', 'latte'),
+		'label' => __('2. Icon URL', 'latte'),
 		'section' => 'latte_social_content',
-		'priority' => 10,
+		'priority' => 15,
 		'settings' => 'latte_social_twitter'
 	));
 
-	$wp_customize->add_setting('latte_social_google_plus', array(
-		'default' => '#',
+	$wp_customize->add_setting('latte_social_twitter_title', array(
+		'default' => __('Twitter', 'latte'),
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('latte_social_twitter_title', array(
+		'label' => __('2. Icon Title', 'latte'),
+		'section' => 'latte_social_content',
+		'priority' => 20,
+		'settings' => 'latte_social_twitter_title'
+	));
+
+	$wp_customize->add_setting('latte_social_google_plus', array(
+		'default' => 'https://plus.google.com',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control('latte_social_google_plus', array(
-		'label' => __('Google + URL', 'latte'),
+		'label' => __('3. Icon URL', 'latte'),
 		'section' => 'latte_social_content',
-		'priority' => 15,
+		'priority' => 25,
 		'settings' => 'latte_social_google_plus'
 	));
 
-	$wp_customize->add_setting('latte_social_instagram', array(
-		'default' => '#',
+	$wp_customize->add_setting('latte_social_google_plus_title', array(
+		'default' => __('Google +', 'latte'),
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('latte_social_google_plus_title', array(
+		'label' => __('3. Icon Title', 'latte'),
+		'section' => 'latte_social_content',
+		'priority' => 30,
+		'settings' => 'latte_social_google_plus_title'
+	));
+
+	$wp_customize->add_setting('latte_social_instagram', array(
+		'default' => 'https://www.instagram.com',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control('latte_social_instagram', array(
-		'label' => __('Instagram URL', 'latte'),
+		'label' => __('4. Icon URL', 'latte'),
 		'section' => 'latte_social_content',
-		'priority' => 20,
+		'priority' => 35,
 		'settings' => 'latte_social_instagram'
 	));
 
-	$wp_customize->add_setting('latte_social_github', array(
-		'default' => '#',
+	$wp_customize->add_setting('latte_social_instagram_title', array(
+		'default' => __('Instagram', 'latte'),
 		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_text_field'
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('latte_social_instagram_title', array(
+		'label' => __('4. Icon Title', 'latte'),
+		'section' => 'latte_social_content',
+		'priority' => 40,
+		'settings' => 'latte_social_instagram_title'
+	));
+
+	$wp_customize->add_setting('latte_social_github', array(
+		'default' => 'https://www.github.com',
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'esc_url_raw',
+		'transport' => 'postMessage'
 	));
 
 	$wp_customize->add_control('latte_social_github', array(
-		'label' => __('Github URL', 'latte'),
+		'label' => __('5. Icon URL', 'latte'),
 		'section' => 'latte_social_content',
-		'priority' => 25,
+		'priority' => 45,
 		'settings' => 'latte_social_github'
+	));
+
+	$wp_customize->add_setting('latte_social_github_title', array(
+		'default' => __('Github', 'latte'),
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field',
+		'transport' => 'postMessage'
+	));
+
+	$wp_customize->add_control('latte_social_github_title', array(
+		'label' => __('5. Icon Title', 'latte'),
+		'section' => 'latte_social_content',
+		'priority' => 50,
+		'settings' => 'latte_social_github_title'
 	));
 
 	$wp_customize->add_setting('latte_social_background_color', array(
