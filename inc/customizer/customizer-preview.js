@@ -19,14 +19,26 @@
 	// Intro Section > Content > Avatar Image
 	wp.customize( 'latte_intro_avatar', function( value ) {
 		value.bind( function( newval ) {
-			$('.intro .avatar').css( 'background-image', 'url(' +newval+ ')' );
+			if ( newval == '' ) {
+				$('.intro .avatar').css( 'display', 'none' );
+			} else {
+				$('.intro .avatar').removeClass( 'customizer-hidden' );
+				$('.intro .avatar').css( 'background-image', 'url(' +newval+ ')' );
+				$('.intro .avatar').css( 'display', 'block' );
+			}
 		} );
 	} );
 
-	// Intro Section > Colors > Background Color
-	wp.customize( 'latte_intro_background_color', function( value ) {
+	// Intro Section > Content > Scroll Anchor
+	wp.customize( 'latte_intro_scroll', function( value ) {
 		value.bind( function( newval ) {
-			$('.intro').css( 'background', newval );
+			if ( newval == '' ) {
+				$('.intro .arrow').css( 'display', 'none' );
+			} else {
+				$('.intro .arrow').removeClass( 'customizer-hidden' );
+				$('.intro .arrow').css( 'display', 'block' );
+				$('.intro .arrow .fa').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -51,6 +63,7 @@
 				$('.about .about-image').css( 'display', 'none' );
 				$('.about .col-md-7').attr( 'class', 'cold-md-12' );
 			} else {
+				$('.about .about-image').removeClass( 'customizer-hidden' );
 				$('.about .about-image').css( 'display', 'block' );
 				$('.about .col-md-12').attr( 'class', 'cold-md-7' );
 				$('.about .about-image').attr( 'src', newval );
@@ -96,7 +109,13 @@
 	// Social Section > Content > 1. Icon URL
 	wp.customize( 'latte_social_facebook', function( value ) {
 		value.bind( function( newval ) {
-			$('.it-first .icon a').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.social .sb-first').css( 'display', 'none' );
+			} else {
+				$('.social .sb-first').removeClass( 'customizer-hidden' );
+				$('.social .sb-first').css( 'display', 'inline-block' );
+				$('.it-first .icon a').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -110,7 +129,13 @@
 	// Social Section > Content > 2. Icon URL
 	wp.customize( 'latte_social_twitter', function( value ) {
 		value.bind( function( newval ) {
-			$('.it-second .icon a').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.social .sb-second').css( 'display', 'none' );
+			} else {
+				$('.social .sb-second').removeClass( 'customizer-hidden' );
+				$('.social .sb-second').css( 'display', 'inline-block' );
+				$('.it-second .icon a').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -124,7 +149,13 @@
 	// Social Section > Content > 3. Icon URL
 	wp.customize( 'latte_social_google_plus', function( value ) {
 		value.bind( function( newval ) {
-			$('.it-third .icon a').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.social .sb-third').css( 'display', 'none' );
+			} else {
+				$('.social .sb-third').removeClass( 'customizer-hidden' );
+				$('.social .sb-third').css( 'display', 'inline-block' );
+				$('.it-third .icon a').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -138,7 +169,13 @@
 	// Social Section > Content > 4. Icon URL
 	wp.customize( 'latte_social_instagram', function( value ) {
 		value.bind( function( newval ) {
-			$('.it-fourth .icon a').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.social .sb-fourth').css( 'display', 'none' );
+			} else {
+				$('.social .sb-fourth').removeClass( 'customizer-hidden' );
+				$('.social .sb-fourth').css( 'display', 'inline-block' );
+				$('.it-fourth .icon a').attr( 'href', newval );
+			}
 		} );
 	} );
 
@@ -152,7 +189,13 @@
 	// Social Section > Content > 5. Icon URL
 	wp.customize( 'latte_social_github', function( value ) {
 		value.bind( function( newval ) {
-			$('.it-fifth .icon a').attr( 'href', newval );
+			if ( newval == '' ) {
+				$('.social .sb-fifth').css( 'display', 'none' );
+			} else {
+				$('.social .sb-fifth').removeClass( 'customizer-hidden' );
+				$('.social .sb-fifth').css( 'display', 'inline-block' );
+				$('.it-fifth .icon a').attr( 'href', newval );
+			}
 		} );
 	} );
 

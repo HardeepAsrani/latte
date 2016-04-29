@@ -276,6 +276,9 @@ img.alignright,
 	font-size: 50px;
 	color: #FFF;
 }
+.intro .customizer-hidden {
+	display: none;
+}
 
 /*
  * Section 2 - About
@@ -303,6 +306,9 @@ img.alignright,
 }
 .about .lead {
 	margin-top: 20px;
+}
+.about .customizer-hidden {
+	display: none;
 }
 
 /*
@@ -345,6 +351,9 @@ img.alignright,
 }
 .social .row .social-box .it-fifth .icon:hover {
 	background: #000;
+}
+.social .row .social-box.customizer-hidden {
+	display: none;
 }
 .icon-item .icon {
 	width: 90px;
