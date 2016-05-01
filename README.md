@@ -51,3 +51,14 @@ Copyright © 2015, StockSlap, CC0 Public Domain, https://creativecommons.org/pub
 
 blog.jpg, https://pixabay.com/en/pencils-writing-write-blog-blogger-762555/
 Copyright © 2015, kaboompics, CC0 Public Domain, https://creativecommons.org/publicdomain/zero/1.0/deed.en
+
+# Changelog #
+
+## Version 1.0 ##
+
+- Initial Release.
+
+## Version 1.1 ##
+
+- Better Customizer support.
+- Add more social icons.
