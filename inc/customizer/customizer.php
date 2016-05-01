@@ -41,6 +41,11 @@ function latte_sanitize_choices( $input, $setting ) {
 
 function latte_customize_register($wp_customize) {
 
+	class Latte_Required_Area extends WP_Customize_Control {
+		public function render_content() {
+			echo __('In order to use the homepage of Latte, you need to create a new page from Pages > Add New, in your WordPress Dashboard.<br/><br/>In the post editing screen, choose the \'Homepage Template\' from the Page templates. After that, set it as your homepage from Settings > Reading settings.<br/><br/>And voila! ','latte');
+		}
+	}
 	class Latte_Subscribe_Widgets_Area extends WP_Customize_Control {
 		public function render_content() {
 			echo __('The main content of this section is customizable in: Customize > Subscribe Section > Subscribe Section. There you must add the "SendinBlue Newsletter." But first you will need to install <a href="https://wordpress.org/plugins/mailin/" target="_blank">SendinBlue plugin</a>.','latte');
@@ -154,6 +159,13 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->get_setting( 'header_image' )->transport = 'postMessage';
 
 	$wp_customize->get_setting( 'header_image_data'  )->transport = 'postMessage';
+
+	if ('posts' == get_option( 'show_on_front' )):
+		$wp_customize->add_section( 'latte_required_action', array(
+			'priority' => 5,
+			'title' => __('Configure Your Homepage', 'latte')
+		));
+	endif;
 
 	$wp_customize->add_section( 'latte_general_background', array(
 		'priority' => 10,
@@ -304,6 +316,14 @@ function latte_customize_register($wp_customize) {
 		'title' => __('Colors', 'latte'),
 		'panel'  => 'latte_blog_settings'
 	));
+
+	$wp_customize->add_setting( 'latte_required_info', array(
+		'sanitize_callback' => 'latte_sanitize_text'
+	));
+
+	$wp_customize->add_control( new Latte_Required_Area( $wp_customize, 'latte_required_info', array(
+		'section' => 'latte_required_action'
+	)));
 
 	$wp_customize->add_setting( 'latte_parallax_background', array(
 		'default' => get_template_directory_uri().'/assets/images/background.jpg',
