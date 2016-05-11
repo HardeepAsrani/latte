@@ -10,6 +10,14 @@ function latte_customizer_live_preview() {
 }
 add_action( 'customize_preview_init', 'latte_customizer_live_preview' );
 
+function latte_customizer_upsell() {
+	wp_enqueue_script( 'latte_upsell', get_template_directory_uri() . '/assets/js/upsell.js', array('jquery'), 'false', true  );
+	wp_localize_script( 'latte_upsell', 'latte_object', array(
+		'pro' => __('Upgrade to Latte Pro','latte')
+	) );
+}
+add_action( 'customize_controls_enqueue_scripts', 'latte_customizer_upsell' );
+
 function latte_sanitize_text( $input ) {
 	return $input;
 }
