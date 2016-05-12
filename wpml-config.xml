@@ -1,0 +1,25 @@
+<wpml-config>
+	<admin-texts>
+		<key name='theme_mods_latte'>
+			<key name='latte_about_title' />
+			<key name='latte_about_subtitle' />
+			<key name='latte_about_name' />
+			<key name='latte_about_position' />
+			<key name='latte_about_content' />
+			<key name='latte_social_title' />
+			<key name='latte_social_facebook_title' />
+			<key name='latte_social_twitter_title' />
+			<key name='latte_social_google_plus_title' />
+			<key name='latte_social_instagram_title' />
+			<key name='latte_social_github_title' />
+			<key name='latte_services_title' />
+			<key name='latte_services_subtitle' />
+			<key name='latte_subscribe_title' />
+			<key name='latte_subscribe_subtitle' />
+			<key name='latte_skills_title' />
+			<key name='latte_skills_subtitle' />
+			<key name='latte_blogposts_title' />
+			<key name='latte_blogposts_subtitle' />
+		<key>	
+    </admin-texts>
+</wpml-config>
