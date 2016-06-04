@@ -22,8 +22,8 @@ $latte = wp_get_theme( 'latte' );
 			<h2><?php printf( esc_html__( 'What\'s new in %s?', 'latte' ), esc_attr( $latte['Version'] ) ); ?></h2>
 			<p><?php printf( esc_html__( 'Take a look at everything that\'s new in the latest version:', 'latte' ) ); ?></p>
 			<ul>
-				<li><?php printf( __('<strong>More Social Icons:</strong> Now add social icons just by putting its URL and theme will select the icons automatically. Is your favorite icon missing? Feel free to contact via my website.', 'latte') ); ?></li>
-				<li><?php printf( __('<strong>Single Background:</strong> Don\'t want so many images? You can now set a single image for the parallax background from Intro settings.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Multilingual Support:</strong> You want site to be in more than just one language? No worries, you can install Polylang plugin and translate Latte in more than one language.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>More Icons:</strong> Added more icons to the theme, which were requested by users.', 'latte') ); ?></li>
 			</ul>
 		</div>
 	</div>
