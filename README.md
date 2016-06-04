@@ -62,3 +62,14 @@ Copyright © 2015, kaboompics, CC0 Public Domain, https://creativecommons.org/pu
 
 - Better Customizer support.
 - Add more social icons.
+- Allows single parallax background.
+
+## Version 1.1.1 ##
+
+- Minor changes.
+
+## Version 1.1.2 ##
+
+- Added multilingual support for Polylang.
+- Updated FontAwesome to latest build.
+- Added more social icons.

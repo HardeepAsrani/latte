@@ -5,17 +5,13 @@
 
 class latte_services_widget extends WP_Widget {
 
-
 	function __construct() {
 		parent::__construct(
 			'latte_services_widget',
 			__( 'Latte - Services Widget', 'latte' ),
 			array( 'description' => __( 'Services widget for Latte theme\'s Services section.', 'latte' ), )
 		);
-
 	}
-
-
 
 	function form($instance) {
 		include get_template_directory() . "/inc/other/font-awesome.php";
@@ -29,7 +25,7 @@ class latte_services_widget extends WP_Widget {
 			<label for="<?php echo esc_attr( $this->get_field_id('icon') ); ?>"><?php esc_html_e('Icon', 'latte'); ?></label>
 			<select class='widefat' id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>">
 			<?php foreach($fontawesome as $item): ?>
-				<option value="<?php echo esc_html($item); ?>" <?php if ($instance['icon'] == $item) echo 'selected="selected"'; ?>><?php echo esc_html($item); ?></option>
+				<option value="<?php echo esc_html($item); ?>" <?php if (isset($instance['icon'])): if ($instance['icon'] == $item): echo 'selected="selected"'; endif; endif; ?>><?php echo esc_html($item); ?></option>
 			<?php endforeach; ?>
 			</select>
 			<label><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/"><?php _e('Click here to see a list of icons.', 'latte'); ?></a></label>
@@ -56,7 +52,7 @@ class latte_services_widget extends WP_Widget {
 		$instance['icon'] = esc_html($new_instance['icon']);
 		$instance['link'] = esc_url($new_instance['link']);
 		$instance['newwindow'] = intval($new_instance['newwindow']);
-		$instance['text'] = wp_kses_post( force_balance_tags( $new_instance['text'] ) );
+		$instance['text'] = wp_kses_post(force_balance_tags( $new_instance['text']));
 		return $instance;
 	}
  
