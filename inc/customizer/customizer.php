@@ -75,10 +75,6 @@ function latte_customize_register($wp_customize) {
 		}
 	}
 
-	if ( !isset( $wp_customize->selective_refresh ) ) {
-		return;
-	}
-
 	$wp_customize->add_panel( 'latte_general_settings', array(
 		'priority'	   => 10,
 		'capability'	 => 'edit_theme_options',
@@ -532,13 +528,15 @@ function latte_customize_register($wp_customize) {
 		'settings' => 'latte_about_content'
 	));
 
-	$wp_customize->selective_refresh->add_partial('latte_about_content', array(
-		'selector' => '.about .lead',
-		'settings' => 'latte_about_content',
-		'render_callback' => function() {
-			return get_theme_mod('latte_about_content');
-		}
-	));
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial('latte_about_content', array(
+			'selector' => '.about .lead',
+			'settings' => 'latte_about_content',
+			'render_callback' => function() {
+				return get_theme_mod('latte_about_content');
+			}
+		));
+	}
 
 	$wp_customize->add_setting( 'latte_about_background_color', array(
 		'default' => '#F5F5F5',
