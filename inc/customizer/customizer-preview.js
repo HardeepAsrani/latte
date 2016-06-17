@@ -42,6 +42,13 @@
 		} );
 	} );
 
+	// Intro Section > Colors > Background Color
+	wp.customize( 'latte_intro_background_color', function( value ) {
+		value.bind( function( newval ) {
+			$('.intro').css( 'background', newval );
+		} );
+	} );
+
 	// About Section > Settings > Section Title
 	wp.customize( 'latte_about_title', function( value ) {
 		value.bind( function( newval ) {
