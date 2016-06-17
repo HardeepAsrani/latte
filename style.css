@@ -438,6 +438,9 @@ img.alignright,
 .icon-item .icon a[href*="behance.com"] i::before {
 	content: '\f1b4';
 }
+.icon-item .icon a[href*="bitbucket.org"] i::before {
+	content: '\f171';
+}
 
 /*
  * Section 4 - Services
