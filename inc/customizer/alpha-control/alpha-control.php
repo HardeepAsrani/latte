@@ -44,14 +44,12 @@ function latte_add_customizer_custom_controls( $wp_customize ) {
 add_action( 'customize_register', 'latte_add_customizer_custom_controls' );
 
 function latte_enqueue_alpha_control_js() {
-    wp_register_script( 'latte_alpha_control_js', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.js', array( 'jquery' ), NULL, true );
-    wp_enqueue_script( 'latte_alpha_control_js' );
+    wp_enqueue_script( 'latte_alpha_control_js', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.js', array( 'jquery' ), NULL, true );
 }
 add_action( 'customize_controls_print_scripts', 'latte_enqueue_alpha_control_js' );
 
 function latte_enqueue_alpha_control_css() {
-    wp_register_style( 'latte_alpha_control_css', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.css', NULL, NULL, 'all' );
-    wp_enqueue_style( 'latte_alpha_control_css' );
+    wp_enqueue_style( 'latte_alpha_control_css', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.css', NULL, NULL, 'all' );
 }
 add_action( 'customize_controls_print_styles', 'latte_enqueue_alpha_control_css' );
 
