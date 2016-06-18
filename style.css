@@ -271,6 +271,7 @@ img.alignright,
 .intro .cover-heading {
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
+	word-break: break-all;
 }
 .intro .arrow .fa {
 	font-size: 50px;
@@ -294,15 +295,16 @@ img.alignright,
 	padding-bottom: 50px;
 	text-align: center;
 }
-.about .about-header h3 {
-	color: #9F8E8E;
-	font-size: 15px;
-	margin-top: 0;
-}
 .about .about-header h2 {
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
+}
+.about .about-header h3 {
+	color: #9F8E8E;
+	font-size: 15px;
+	margin-top: 0;
 }
 .about .lead {
 	margin-top: 20px;
@@ -331,6 +333,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .social .row .social-box {
 	float: none;
@@ -460,6 +463,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .services h3 {
 	color: #9F8E8E;
@@ -518,6 +522,7 @@ img.alignright,
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
 	color: #FFF;
+	word-break: break-all;
 }
 .subscribe h3 {
 	color: #FFF;
@@ -554,6 +559,7 @@ img.alignright,
 	border-radius: 0 !important;
 	display: inline-block;
 	font-size: 15px;
+	white-space: normal;
 }
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
 	background: #222;
@@ -578,6 +584,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .skills h3 {
 	color: #9F8E8E;
@@ -674,6 +681,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .blogposts h3 {
 	color: #9F8E8E;
