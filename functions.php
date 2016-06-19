@@ -14,7 +14,7 @@ if ( is_admin() ) {
 	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 }
 
-if (!function_exists('latte_setup')) {
+if ( !function_exists( 'latte_setup' ) ) {
 	function latte_setup() {
 		// Using this feature you can set the maximum allowed width for any content in the theme, like oEmbeds and images added to posts.  https://codex.wordpress.org/Content_Width
 		global $content_width;
@@ -153,6 +153,7 @@ function latte_scripts() {
 	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_template_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_template_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
 	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array( 'jquery' ),'',true);
 	wp_enqueue_script( 'latte_scripts_js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'',true);
 
 	if( is_page_template( 'template-home.php' ) ) :
@@ -183,6 +184,7 @@ function latte_admin_scripts($hook) {
 
 	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css' );
 }
+
 add_action( 'admin_enqueue_scripts', 'latte_admin_scripts' );
 
 // Registering and enqueuing scripts/stylesheets for Customizer controls.
@@ -196,6 +198,7 @@ add_action( 'customize_controls_enqueue_scripts', 'latte_customizer_js' );
 function latte_customizer_css() {
 	wp_enqueue_style( 'latte_font_awesome', get_template_directory_uri().'/assets/font-awesome/css/font-awesome.min.css' );
 }
+
 add_action( 'customize_controls_print_styles', 'latte_customizer_css' );
 
 // Default menu for new setups.
