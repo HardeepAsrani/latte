@@ -32,6 +32,9 @@ Documentation licensed under CC BY 3.0, http://creativecommons.org/licenses/by/3
 jquery.matchHeight.js, http://brm.io/jquery-match-height/
 Copyright © 2014, liabru, MIT License, http://www.opensource.org/licenses/MIT
 
+imagesloaded.pkgd.js, http://imagesloaded.desandro.com/
+Copyright © 2014, desandro, MIT License, http://www.opensource.org/licenses/MIT
+
 parllax.js, http://pixelcog.github.io/parallax.js/
 Copyright © 2015, PixelCog Inc, MIT License, http://www.opensource.org/licenses/MIT
 
@@ -72,3 +75,14 @@ Copyright © 2015, kaboompics, CC0 Public Domain, https://creativecommons.org/pu
 - Added multilingual support for Polylang.
 - Updated FontAwesome to latest build.
 - Added more social icons.
+
+## Version 2.0 ##
+
+- Service section now display icons.
+- Added option to choose category in Blog section.
+- Added hooks to homepage template.
+- Added imagesloaded to load images properly.
+- Added more social icons.
+- Fixed default in Alpha Control.
+- Fixed selective refresh issue, which was causing Customizer to return in older version of WordPress.
+- Fixed text overlapping issue in mobile.

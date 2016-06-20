@@ -22,7 +22,10 @@ $latte = wp_get_theme( 'latte' );
 			<h2><?php printf( esc_html__( 'What\'s new in %s?', 'latte' ), esc_attr( $latte['Version'] ) ); ?></h2>
 			<p><?php printf( esc_html__( 'Take a look at everything that\'s new in the latest version:', 'latte' ) ); ?></p>
 			<ul>
-				<li><?php printf( __('<strong>Multilingual Support:</strong> You want site to be in more than just one language? No worries, you can install Polylang plugin and translate Latte in more than one language.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Free Add-on!:</strong> We\'re giving away a Pro add-on for free, which will add Contact section to your Latte theme. It\'s a section from the Pro version, so get it for free before we change our mind! Look at the box on the right side for more details.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Added Hooks:</strong> Are you a developer? If you\'re then we\'ve added hooks to our front-page so you could customize the theme easily. Check documentation for details.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>New Options:</strong> You can display posts from a particular category in blog section.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>View Services Icon:</strong> You can now view the icons in Services widget.', 'latte') ); ?></li>
 				<li><?php printf( __('<strong>More Icons:</strong> Added more icons to the theme, which were requested by users.', 'latte') ); ?></li>
 			</ul>
 		</div>
@@ -36,6 +39,19 @@ $latte = wp_get_theme( 'latte' );
 				<a href="http://www.hardeepasrani.com/portfolio/latte/" class="button button-primary" target="_blank"><?php esc_html_e( 'Go Pro!', 'latte' ); ?></a>
 			</p>
 		</div>
+		<?php if (defined('LATTE_CONTACT_EXTENSION')) : ?>
+			<div class="boxed downloaded">
+				<h2><?php printf( esc_html__( 'Contact Section Extension', 'latte' ) ); ?> <sup class="activated"><?php printf( esc_html__( 'Activated', 'latte' ) ); ?></sup></h2>
+				<p><?php printf( esc_html__( 'Contact section add-on adds a beautiful contact section to your homepage.', 'latte' ) ); ?></p>
+				<p><a href="<?php echo esc_url( self_admin_url( 'customize.php' ) ); ?>" class="button button-primary"><?php printf( esc_html__( 'Customize', 'latte' ) ); ?></a></p>
+			</div>
+		<?php else: ?>
+			<div class="boxed addon">
+				<h2><?php esc_html_e( 'Free Contact Section Add-on!', 'latte' ); ?></h2>
+				<p><?php printf( esc_html__( 'Contact section add-on adds a beautiful contact section to your homepage. We\'re giving away this Pro feature for free!', 'latte' ) ); ?></p>
+				<p><a href="http://www.hardeepasrani.com/latte-addon/" class="button button-primary" target="_blank"><?php esc_html_e( 'Get it!', 'latte' ); ?></a></p>
+			</div>
+		<?php endif;?>
 	</div>
 </div>
 
