@@ -24,17 +24,14 @@ function latte_add_customizer_custom_controls( $wp_customize ) {
     class Latte_Customize_Alpha_Color_Control extends WP_Customize_Control {
     
 		public $type = 'alphacolor';
-		//public $palette = '#3FADD7,#555555,#666666, #F5f5f5,#333333,#404040,#2B4267';
 		public $palette = true;
-		public $default = '#3FADD7';
-	
-		protected function render() {
-			$id = 'customize-control-' . str_replace( '[', '-', str_replace( ']', '', $this->id ) );
-			$class = 'customize-control customize-control-' . $this->type; ?>
-			<li id="<?php echo esc_attr( $id ); ?>" class="<?php echo esc_attr( $class ); ?>">
-				<?php $this->render_content(); ?>
-			</li>
-		<?php }
+		public $default = array();
+
+		public function to_json() {
+			$default = $this->default;
+			$this->json['default'] = $default;
+			parent::to_json();
+		}
 	
 		public function render_content() { ?>
 			<label>
@@ -47,14 +44,12 @@ function latte_add_customizer_custom_controls( $wp_customize ) {
 add_action( 'customize_register', 'latte_add_customizer_custom_controls' );
 
 function latte_enqueue_alpha_control_js() {
-    wp_register_script( 'latte_alpha_control_js', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.js', array( 'jquery' ), NULL, true );
-    wp_enqueue_script( 'latte_alpha_control_js' );
+    wp_enqueue_script( 'latte_alpha_control_js', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.js', array( 'jquery' ), NULL, true );
 }
 add_action( 'customize_controls_print_scripts', 'latte_enqueue_alpha_control_js' );
 
 function latte_enqueue_alpha_control_css() {
-    wp_register_style( 'latte_alpha_control_css', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.css', NULL, NULL, 'all' );
-    wp_enqueue_style( 'latte_alpha_control_css' );
+    wp_enqueue_style( 'latte_alpha_control_css', get_template_directory_uri() . '/inc/customizer/alpha-control/alpha_control.css', NULL, NULL, 'all' );
 }
 add_action( 'customize_controls_print_styles', 'latte_enqueue_alpha_control_css' );
 

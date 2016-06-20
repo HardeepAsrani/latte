@@ -23,9 +23,9 @@ class latte_services_widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo esc_attr( $this->get_field_id('icon') ); ?>"><?php esc_html_e('Icon', 'latte'); ?></label>
-			<select class='widefat' id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>">
-			<?php foreach($fontawesome as $item): ?>
-				<option value="<?php echo esc_html($item); ?>" <?php if (isset($instance['icon'])): if ($instance['icon'] == $item): echo 'selected="selected"'; endif; endif; ?>><?php echo esc_html($item); ?></option>
+			<select class='fa widefat' id="<?php echo esc_attr( $this->get_field_id('icon') ); ?>" name="<?php echo esc_attr( $this->get_field_name('icon') ); ?>">
+			<?php foreach($fontawesome as $key => $value): ?>
+				<option value="<?php echo esc_html($key); ?>" <?php if (isset($instance['icon'])): if ($instance['icon'] == $key): echo 'selected="selected"'; endif; endif; ?>>&#x<?php echo esc_html($value); ?> <?php echo esc_html($key); ?></option>
 			<?php endforeach; ?>
 			</select>
 			<label><a target="_blank" href="http://fortawesome.github.io/Font-Awesome/icons/"><?php _e('Click here to see a list of icons.', 'latte'); ?></a></label>

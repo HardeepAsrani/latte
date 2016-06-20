@@ -4,7 +4,7 @@ Theme URI: http://www.hardeepasrani.com/portfolio/latte/
 Author: Hardeep Asrani
 Author URI: http://www.hardeepasrani.com
 Description: Latte is a one-page parallax WordPress theme for developers, designers & freelancers, to showcase their profile. It comes with many options, including services section, and more. Plus, it’s easy to customize! You don’t need a page builder or a drag & drop editor. Every thing can be customized straight from the WordPress Customizer.
-Version: 1.1.2
+Version: 2.0
 License: GNU General Public License version 2 or later
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, photography, portfolio
@@ -271,6 +271,7 @@ img.alignright,
 .intro .cover-heading {
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
+	word-break: break-all;
 }
 .intro .arrow .fa {
 	font-size: 50px;
@@ -294,15 +295,16 @@ img.alignright,
 	padding-bottom: 50px;
 	text-align: center;
 }
-.about .about-header h3 {
-	color: #9F8E8E;
-	font-size: 15px;
-	margin-top: 0;
-}
 .about .about-header h2 {
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
+}
+.about .about-header h3 {
+	color: #9F8E8E;
+	font-size: 15px;
+	margin-top: 0;
 }
 .about .lead {
 	margin-top: 20px;
@@ -331,6 +333,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .social .row .social-box {
 	float: none;
@@ -438,6 +441,9 @@ img.alignright,
 .icon-item .icon a[href*="behance.com"] i::before {
 	content: '\f1b4';
 }
+.icon-item .icon a[href*="bitbucket.org"] i::before {
+	content: '\f171';
+}
 
 /*
  * Section 4 - Services
@@ -457,6 +463,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .services h3 {
 	color: #9F8E8E;
@@ -515,6 +522,7 @@ img.alignright,
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
 	color: #FFF;
+	word-break: break-all;
 }
 .subscribe h3 {
 	color: #FFF;
@@ -551,6 +559,7 @@ img.alignright,
 	border-radius: 0 !important;
 	display: inline-block;
 	font-size: 15px;
+	white-space: normal;
 }
 .subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
 	background: #222;
@@ -575,6 +584,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .skills h3 {
 	color: #9F8E8E;
@@ -671,6 +681,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
+	word-break: break-all;
 }
 .blogposts h3 {
 	color: #9F8E8E;

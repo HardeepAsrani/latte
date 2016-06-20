@@ -4,6 +4,7 @@
 */
 
 require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/alpha-control/alpha-control.php' );
+require_once( trailingslashit( get_template_directory() ) . '/inc/customizer/category-dropdown-custom-control.php' );
 
 function latte_customizer_live_preview() {
 	wp_enqueue_script( 'latte_customizer_preview', get_template_directory_uri().'/inc/customizer/customizer-preview.js', array( 'jquery','customize-preview' ), '', true );
@@ -73,10 +74,6 @@ function latte_customize_register($wp_customize) {
 		public function render_content() {
 			echo __('The main content of this section is customizable in: Posts > Add New, in your WordPress dashboard.','latte');
 		}
-	}
-
-	if ( !isset( $wp_customize->selective_refresh ) ) {
-		return;
 	}
 
 	$wp_customize->add_panel( 'latte_general_settings', array(
@@ -432,6 +429,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_intro_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_intro_colors',
+		'default' => 'rgba(0, 0, 0, 0.7)',
 		'priority' => 5,
 		'settings' => 'latte_intro_background_color'
 	)));
@@ -532,13 +530,15 @@ function latte_customize_register($wp_customize) {
 		'settings' => 'latte_about_content'
 	));
 
-	$wp_customize->selective_refresh->add_partial('latte_about_content', array(
-		'selector' => '.about .lead',
-		'settings' => 'latte_about_content',
-		'render_callback' => function() {
-			return get_theme_mod('latte_about_content');
-		}
-	));
+	if ( isset( $wp_customize->selective_refresh ) ) {
+		$wp_customize->selective_refresh->add_partial('latte_about_content', array(
+			'selector' => '.about .lead',
+			'settings' => 'latte_about_content',
+			'render_callback' => function() {
+				return get_theme_mod('latte_about_content');
+			}
+		));
+	}
 
 	$wp_customize->add_setting( 'latte_about_background_color', array(
 		'default' => '#F5F5F5',
@@ -550,6 +550,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_about_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_about_colors',
+		'default' => '#F5F5F5',
 		'priority' => 5,
 		'settings' => 'latte_about_background_color'
 	)));
@@ -730,6 +731,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_social_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_social_colors',
+		'default' => 'rgba(0, 0, 0, 0.7)',
 		'priority' => 5,
 		'settings' => 'latte_social_background_color'
 	)));
@@ -784,6 +786,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_services_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_services_colors',
+		'default' => '#F5F5F5',
 		'priority' => 5,
 		'settings' => 'latte_services_background_color'
 	)));
@@ -847,6 +850,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_subscribe_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_subscribe_colors',
+		'default' => 'rgba(0, 0, 0, 0.7)',
 		'priority' => 5,
 		'settings' => 'latte_subscribe_background_color'
 	)));
@@ -901,6 +905,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_skills_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_skills_colors',
+		'default' => '#F5F5F5',
 		'priority' => 5,
 		'settings' => 'latte_skills_background_color'
 	)));
@@ -967,6 +972,19 @@ function latte_customize_register($wp_customize) {
 		'section' => 'latte_blogposts_content'
 	)));
 
+	$wp_customize->add_setting( 'latte_blogposts_category', array(
+		'default' => 0,
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_text_field'
+	));
+
+	$wp_customize->add_control(new Latte_Category_Dropdown_Control($wp_customize, 'latte_blogposts_category', array(
+		'label' => __('Display Posts From:', 'latte'),
+		'section' => 'latte_blogposts_content',
+		'priority' => 10,
+		'settings' => 'latte_blogposts_category'
+	)));
+
 	$wp_customize->add_setting( 'latte_blogposts_background_color', array(
 		'default' => '#F5F5F5',
 		'capability' => 'edit_theme_options',
@@ -977,6 +995,7 @@ function latte_customize_register($wp_customize) {
 	$wp_customize->add_control(new Latte_Customize_Alpha_Color_Control($wp_customize, 'latte_blogposts_background_color', array(
 		'label' => __('Background Color', 'latte'),
 		'section' => 'latte_blogposts_colors',
+		'default' => '#F5F5F5',
 		'priority' => 5,
 		'settings' => 'latte_blogposts_background_color'
 	)));

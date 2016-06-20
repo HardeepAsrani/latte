@@ -2,26 +2,27 @@
 	$latte_blogposts_title = get_theme_mod('latte_blogposts_title',__( 'Blog', 'latte' ));
 	$latte_blogposts_subtitle = get_theme_mod('latte_blogposts_subtitle',__( 'My thoughts.', 'latte' ));
 	$latte_blogposts_items = get_theme_mod('latte_blogposts_items', 6);
+	$latte_blogposts_category = get_theme_mod('latte_blogposts_category', 0);
 ?>
 
 		<section class="blogposts" id="blogposts">
 			<div class="container">
 				<div class="row">
-				<?php if(!empty($latte_blogposts_title) || !empty($latte_blogposts_subtitle) || is_customize_preview() ) : ?>
+				<?php if(!empty($latte_blogposts_title) || !empty($latte_blogposts_subtitle) || is_customize_preview()) : ?>
 					<header data-sr="ease-in-out wait 0.25s" class="blog-header">
-					<?php if(!empty($latte_blogposts_title) || is_customize_preview() ) : ?>
+					<?php if(!empty($latte_blogposts_title) || is_customize_preview()) : ?>
 						<h2><?php echo esc_html($latte_blogposts_title); ?></h2>
 					<?php endif; ?>
-					<?php if(!empty($latte_blogposts_subtitle) || is_customize_preview() ) : ?>
+					<?php if(!empty($latte_blogposts_subtitle) || is_customize_preview()) : ?>
 						<h3><?php echo esc_html($latte_blogposts_subtitle); ?></h3>
 					<?php endif; ?>
 					</header>
 				<?php endif; ?>
 					<div class="col-md-12">
 					<?php if(!empty($latte_blogposts_items)) : ?>
-						<?php $loop = new WP_Query( array( 'posts_per_page' => $latte_blogposts_items ) ); ?>
+						<?php $loop = new WP_Query( array( 'posts_per_page' => $latte_blogposts_items, 'cat' => $latte_blogposts_category ) ); ?>
 					<?php else: ?>
-						<?php $loop = new WP_Query( array( 'posts_per_page' => -1 ) ); ?>
+						<?php $loop = new WP_Query( array( 'posts_per_page' => -1, 'cat' => $latte_blogposts_category ) ); ?>
 					<?php endif; ?>
 					<?php if ( $loop->have_posts() ): ?>
 						<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
