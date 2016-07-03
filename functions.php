@@ -162,7 +162,7 @@ function latte_scripts() {
 		$latte_is_homepage = 1;
 	endif;
 
-	wp_localize_script('latte_scripts_js', 'latte_script_var', array(
+	wp_localize_script( 'latte_scripts_js', 'latte_script_var', array(
 		'latte_preloader_display' => get_theme_mod('latte_preloader_display'),
 		'latte_animations_display' => get_theme_mod('latte_animations_display'),
 		'latte_is_homepage' => $latte_is_homepage,
