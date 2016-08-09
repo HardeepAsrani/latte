@@ -23,31 +23,37 @@
 						else:
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('HTML', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-html5',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('CSS', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-css3',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('WordPress', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-wordpress',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('Linux', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-linux',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('SEO', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-search',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));	
 							the_widget( 'latte_services_widget', array(
 								'title' => esc_html__('Writing', 'latte'),
+								'type' => 0,
 								'icon' => 'fa-pencil',
 								'text' => esc_html__('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'latte'),
 							));	
