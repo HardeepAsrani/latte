@@ -153,7 +153,7 @@ function latte_scripts() {
 	if( isset($latte_animations_display) && $latte_animations_display != 1 )wp_enqueue_script( 'latte_scrollreveal', get_template_directory_uri() . '/assets/js/scrollReveal.min.js', array( 'jquery' ),'',true);
 	if( isset($latte_menu_display) && $latte_menu_display != 1 )wp_enqueue_script( 'latte_classie', get_template_directory_uri() . '/assets/js/classie.js', array( 'jquery' ),'',true);
 	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_matchHeight', get_template_directory_uri() . '/assets/js/jquery.matchHeight.js', array( 'jquery' ),'',true);
-	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'latte_imagesloaded', get_template_directory_uri() . '/assets/js/imagesloaded.pkgd.min.js', array( 'jquery' ),'',true);
+	if( is_page_template( 'template-home.php' ) ) wp_enqueue_script( 'imagesloaded', array( 'jquery' ),'',true);
 	wp_enqueue_script( 'latte_scripts_js', get_template_directory_uri() . '/assets/js/scripts.js', array( 'jquery' ),'',true);
 
 	if( is_page_template( 'template-home.php' ) ) :
