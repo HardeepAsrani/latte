@@ -532,20 +532,20 @@ img.alignright,
 .subscribe .sendinbluetitle {
 	color: #FFF;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside p {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] p {
 	background: transparent !important;
 	display: inline;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside label {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] label {
 	background: transparent !important;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-alert-message {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-alert-message {
 	margin: 10px 0 !important;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-email-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-NAME-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-SURNAME-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-SMS-area {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-email-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-NAME-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-SURNAME-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-SMS-area {
 	padding: 10px 16px !important;
 	margin: 5px 0px !important;
 	border-radius: 0 !important;
@@ -553,7 +553,7 @@ img.alignright,
 	max-width: 300px;
 	height: 40px;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-default-btn {
 	padding: 10px 16px !important;
 	margin: 5px 0px !important;
 	border-radius: 0 !important;
@@ -561,7 +561,7 @@ img.alignright,
 	font-size: 15px;
 	white-space: normal;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-default-btn:hover {
 	background: #222;
 	border-color: #222;
 }
