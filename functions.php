@@ -95,7 +95,7 @@ if ( ! function_exists( '_wp_render_title_tag' ) ) {
 function latte_widgets_init() {
 
 	register_sidebar( array(
-		'name'		  => __( 'Sidear', 'latte' ),
+		'name'		  => __( 'Sidebar', 'latte' ),
 		'id'			=> 'sidebar-widgets',
 		'before_widget' => '',
 		'after_widget'  => '',
