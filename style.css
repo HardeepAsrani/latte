@@ -446,6 +446,15 @@ img.alignright,
 .icon-item .icon a[href*="bitbucket.org"] i::before {
 	content: '\f171';
 }
+.icon-item .icon a[href^="skype:"] i::before {
+	content: '\f17e';
+}
+.icon-item .icon a[href^="mailto:"] i::before {
+	content: '\f0e0';
+}
+.icon-item .icon a[href^="tel:"] i::before {
+	content: '\f095';
+}
 
 /*
  * Section 4 - Services
