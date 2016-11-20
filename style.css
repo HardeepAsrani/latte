@@ -376,7 +376,9 @@ img.alignright,
 	font-size: 50px;
 	line-height: 1.7;
 }
-
+.icon-item .icon a i::before {
+	content: '\f0c1';
+}
 .icon-item .icon a[href*="facebook.com"] i::before {
 	content: '\f09a';
 }
