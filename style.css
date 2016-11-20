@@ -9,9 +9,9 @@ License: GNU General Public License version 2 or later
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, photography, portfolio
 Text Domain: latte
-* 
-* Latte WordPress Theme, Copyright (C) 2016, Hardeep Asrani
-* Latte is distributed under the terms of the GNU GPL
+
+Latte WordPress Theme, Copyright (C) 2016, Hardeep Asrani
+Latte is distributed under the terms of the GNU GPL
 */
 
 /*
@@ -271,7 +271,7 @@ img.alignright,
 .intro .cover-heading {
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .intro .arrow .fa {
 	font-size: 50px;
@@ -299,7 +299,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .about .about-header h3 {
 	color: #9F8E8E;
@@ -333,7 +333,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .social .row .social-box {
 	float: none;
@@ -376,7 +376,9 @@ img.alignright,
 	font-size: 50px;
 	line-height: 1.7;
 }
-
+.icon-item .icon a i::before {
+	content: '\f0c1';
+}
 .icon-item .icon a[href*="facebook.com"] i::before {
 	content: '\f09a';
 }
@@ -444,6 +446,15 @@ img.alignright,
 .icon-item .icon a[href*="bitbucket.org"] i::before {
 	content: '\f171';
 }
+.icon-item .icon a[href^="skype:"] i::before {
+	content: '\f17e';
+}
+.icon-item .icon a[href^="mailto:"] i::before {
+	content: '\f0e0';
+}
+.icon-item .icon a[href^="tel:"] i::before {
+	content: '\f095';
+}
 
 /*
  * Section 4 - Services
@@ -463,7 +474,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .services h3 {
 	color: #9F8E8E;
@@ -472,7 +483,7 @@ img.alignright,
 }
 .services .service-box {
 	padding: 25px;	
-	word-break: break-all;
+	word-break: keep-all;
 }
 .services .service-item {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.176);
@@ -522,7 +533,7 @@ img.alignright,
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
 	color: #FFF;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .subscribe h3 {
 	color: #FFF;
@@ -532,20 +543,20 @@ img.alignright,
 .subscribe .sendinbluetitle {
 	color: #FFF;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside p {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] p {
 	background: transparent !important;
 	display: inline;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside label {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] label {
 	background: transparent !important;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-alert-message {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-alert-message {
 	margin: 10px 0 !important;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-email-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-NAME-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-SURNAME-area,
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-SMS-area {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-email-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-NAME-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-SURNAME-area,
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-SMS-area {
 	padding: 10px 16px !important;
 	margin: 5px 0px !important;
 	border-radius: 0 !important;
@@ -553,7 +564,7 @@ img.alignright,
 	max-width: 300px;
 	height: 40px;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-default-btn {
 	padding: 10px 16px !important;
 	margin: 5px 0px !important;
 	border-radius: 0 !important;
@@ -561,7 +572,7 @@ img.alignright,
 	font-size: 15px;
 	white-space: normal;
 }
-.subscribe .sib_signup_form .sib_signup_box_inside .sib-default-btn:hover {
+.subscribe .sib_signup_form [class*="sib_signup_box_inside"] .sib-default-btn:hover {
 	background: #222;
 	border-color: #222;
 }
@@ -584,7 +595,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .skills h3 {
 	color: #9F8E8E;
@@ -681,7 +692,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .blogposts h3 {
 	color: #9F8E8E;
@@ -754,6 +765,9 @@ img.alignright,
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
 }
+.archive-header .cover-heading a {
+	color: #FFF;
+}
 .post-header {
 	background: transparent url('assets/images/blog.jpg') repeat scroll center center / cover;
 	vertical-align: top;
@@ -775,6 +789,9 @@ img.alignright,
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
 }
+.post-header .cover-heading a {
+	color: #FFF;
+}
 .post-header .back {
 	font-size: 21px;
 	color: #FFF;
@@ -787,6 +804,9 @@ img.alignright,
 }
 .container .item  a {
 	color: #404040;
+}
+.container .item .post-thumbnail {
+	text-align: center;
 }
 .container .item .post-content a,
 .container .item .post-subtitle a {
@@ -956,7 +976,7 @@ article.search-results {
 .latte-push-menu,
 .latte-push-menu .sub-menu {
 	padding: 0;
-	word-wrap: break-all;
+	word-wrap: keep-all;
 }
 .menu-item-has-children > .sub-menu {
 	display: none;

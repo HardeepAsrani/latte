@@ -9,11 +9,11 @@
 			);	?>
 		</div>
 		<div class="content">
-		<?php 
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php endif; ?>
 			<div class="post-content">
 			<a class="status-avatar" href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php echo get_avatar( get_the_author_meta( 'email' ), '60' ); ?></a>
 			<?php the_content(); ?>

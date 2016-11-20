@@ -32,9 +32,6 @@ Documentation licensed under CC BY 3.0, http://creativecommons.org/licenses/by/3
 jquery.matchHeight.js, http://brm.io/jquery-match-height/
 Copyright © 2014, liabru, MIT License, http://www.opensource.org/licenses/MIT
 
-imagesloaded.pkgd.js, http://imagesloaded.desandro.com/
-Copyright © 2014, desandro, MIT License, http://www.opensource.org/licenses/MIT
-
 parllax.js, http://pixelcog.github.io/parallax.js/
 Copyright © 2015, PixelCog Inc, MIT License, http://www.opensource.org/licenses/MIT
 

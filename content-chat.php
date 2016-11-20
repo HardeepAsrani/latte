@@ -9,11 +9,11 @@
 			);	?>
 		</div>
 		<div class="content">
-		<?php 
-			if ( has_post_thumbnail() ) :
-				the_post_thumbnail();
-			endif;
-		?>
+		<?php if ( has_post_thumbnail() ) : ?>
+			<div class="post-thumbnail">
+				<?php the_post_thumbnail(); ?>
+			</div>
+		<?php endif; ?>
 			<div class="post-content">
 				<?php if ( has_excerpt() ) : ?>
 					<?php the_excerpt(); ?>
