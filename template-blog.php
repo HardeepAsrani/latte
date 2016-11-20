@@ -8,7 +8,7 @@
 		<header class="archive-header">
 			<div class="cover-container row">
 				<div class="inner cover col-md-12">
-					<h1 class="cover-heading"><?php bloginfo( 'name' ); ?></h1>
+					<h1 class="cover-heading"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 					<p class="lead"><?php bloginfo( 'description' ); ?></p>
 				</div>
 			</div>
