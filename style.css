@@ -9,9 +9,9 @@ License: GNU General Public License version 2 or later
 License URI: license.txt
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, full-width-template, post-formats, sticky-post, theme-options, threaded-comments, translation-ready, blog, entertainment, photography, portfolio
 Text Domain: latte
-* 
-* Latte WordPress Theme, Copyright (C) 2016, Hardeep Asrani
-* Latte is distributed under the terms of the GNU GPL
+
+Latte WordPress Theme, Copyright (C) 2016, Hardeep Asrani
+Latte is distributed under the terms of the GNU GPL
 */
 
 /*
@@ -271,7 +271,7 @@ img.alignright,
 .intro .cover-heading {
 	font-family: 'Sanchez', sans-serif;
 	font-size: 50px;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .intro .arrow .fa {
 	font-size: 50px;
@@ -299,7 +299,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .about .about-header h3 {
 	color: #9F8E8E;
@@ -333,7 +333,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .social .row .social-box {
 	float: none;
@@ -474,7 +474,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .services h3 {
 	color: #9F8E8E;
@@ -483,7 +483,7 @@ img.alignright,
 }
 .services .service-box {
 	padding: 25px;	
-	word-break: break-all;
+	word-break: keep-all;
 }
 .services .service-item {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.176);
@@ -533,7 +533,7 @@ img.alignright,
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
 	color: #FFF;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .subscribe h3 {
 	color: #FFF;
@@ -595,7 +595,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .skills h3 {
 	color: #9F8E8E;
@@ -692,7 +692,7 @@ img.alignright,
 	font-size: 40px;
 	font-family: "Sanchez",sans-serif;
 	font-weight: bold;
-	word-break: break-all;
+	word-break: keep-all;
 }
 .blogposts h3 {
 	color: #9F8E8E;
@@ -973,7 +973,7 @@ article.search-results {
 .latte-push-menu,
 .latte-push-menu .sub-menu {
 	padding: 0;
-	word-wrap: break-all;
+	word-wrap: keep-all;
 }
 .menu-item-has-children > .sub-menu {
 	display: none;
