@@ -805,6 +805,9 @@ img.alignright,
 .container .item  a {
 	color: #404040;
 }
+.container .item .post-thumbnail {
+	text-align: center;
+}
 .container .item .post-content a,
 .container .item .post-subtitle a {
 	color: #0085A1;
