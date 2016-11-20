@@ -22,12 +22,15 @@ $latte = wp_get_theme( 'latte' );
 			<h2><?php printf( esc_html__( 'What\'s new in %s?', 'latte' ), esc_attr( $latte['Version'] ) ); ?></h2>
 			<p><?php printf( esc_html__( 'Take a look at everything that\'s new in the latest version:', 'latte' ) ); ?></p>
 			<ul>
-				<li><?php printf( __('<strong>Free Add-on!:</strong> We\'re giving away a Pro add-on for free, which will add Contact section to your Latte theme. It\'s a section from the Pro version, so get it for free before we change our mind! Look at the box on the right side for more details.', 'latte') ); ?></li>
-				<li><?php printf( __('<strong>Added Hooks:</strong> Are you a developer? If you\'re then we\'ve added hooks to our front-page so you could customize the theme easily. Check documentation for details.', 'latte') ); ?></li>
-				<li><?php printf( __('<strong>New Options:</strong> You can display posts from a particular category in blog section.', 'latte') ); ?></li>
-				<li><?php printf( __('<strong>View Services Icon:</strong> You can now view the icons in Services widget.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Image Options in Services Widget:</strong> In addition to icons, Services widgets now allow you to display images.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Skills Color Picker:</strong> Choosing colors can be hard so we added a color picker to the Skills widget to make it easier.', 'latte') ); ?></li>
 				<li><?php printf( __('<strong>More Icons:</strong> Added more icons to the theme, which were requested by users.', 'latte') ); ?></li>
+				<li><?php printf( __('<strong>Bug Fixes:</strong> We fixed tons of bugs in this update. Don\'t forget to let us know if you see any.', 'latte') ); ?></li>
 			</ul>
+		</div>
+		<div class="boxed hire">
+			<h2><?php printf( esc_html__( 'Need help with customization?', 'latte' ) ); ?></h2>
+			<p><?php printf( __( 'If you want to hire someone to customize the theme for you then <a target="_blank" href="http://www.hardeepasrani.com/contact/">click here</a>.', 'latte' ) ); ?></p>
 		</div>
 	</div>
 	<div class="col">
