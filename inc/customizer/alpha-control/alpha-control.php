@@ -34,8 +34,8 @@ function latte_add_customizer_custom_controls( $wp_customize ) {
 		}
 	
 		public function render_content() { ?>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 			<label>
-				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<input type="text" data-palette="<?php echo $this->palette; ?>" data-default-color="<?php echo $this->default; ?>" value="<?php echo intval( $this->value() ); ?>" class="latte-color-control" <?php $this->link(); ?>  />
 			</label>
 		<?php }
