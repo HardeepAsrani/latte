@@ -79,5 +79,7 @@ class latte_skills_widget extends WP_Widget {
 
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("latte_skills_widget");'));
+add_action( 'widgets_init', function () {
+	register_widget( 'latte_skills_widget' );
+} );
 ?>
