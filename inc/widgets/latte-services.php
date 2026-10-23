@@ -106,5 +106,7 @@ class latte_services_widget extends WP_Widget {
 
 }
 
-add_action('widgets_init', create_function('', 'return register_widget("latte_services_widget");'));
+add_action( 'widgets_init', function () {
+	register_widget( 'latte_services_widget' );
+} );
 ?>
